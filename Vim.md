@@ -77,7 +77,7 @@ Bright vixens jump; dozy fowl quack.
 | 按键 | 说明 |
 | :--: | :--: |
 | `x` | 删除当前字符 |
-| `d` \| ==delete== | 删除功能，需要配合`<motion>`使用 |
+| `d` \| delete | 删除功能，需要配合`<motion>`使用 |
 
 - `x`操作比较简单，`<number> + x`的功能是删除从光标起的n个字符，没有其他的用法了（据我所知）。
 - `d`的功能就比较多了，可以配合`<motion>`和`<number>`实现多种功能，举例如下：
@@ -168,7 +168,7 @@ Bright vixens jump; dozy fowl quack.
 
 - 举例：如果想利用可视模式删掉下图光标所在行的"How quickly daft"应该怎么做？
 
-![[image-20240510155735301.png]]
+![image-20240510155735301](https://github.com/Zzzhxxxx/Linux-and-Vim/assets/131342513/6d7ef5a7-fd32-4bfc-9941-e208f0075d94)
 
 - 答：`v + 3e + d`。
 
