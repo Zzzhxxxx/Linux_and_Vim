@@ -1,3 +1,38 @@
+## 1.9 配置Shell
+- 在开始本章节前，需要先确定您的shell类型。常见的shell类型有bash/csh/zsh等等。
+- 使用`echo $SHELL`命令查看您的shell类型。
+- 如果返回的是`/bin/bash`，说明您的shell类型是bash（下面的操作暂时以bash为例）。
+- 进入`home`目录，然后打开`.bashrc`文件：
+
+```shell
+cd ~
+givm .bashrc
+```
+
+- 注：如果您的Shell不是bash，可以在home目录下使用`ls -a`命令查看名为`.<shell_type>rc`的文件并打开它。这里的`rc`意为`run commands`，代表启动Shell时自动执行的命令。[[#2.6 配置Vim]]中的`.vimrc`也是同样的道理。
+- 打开`.bashrc`文件后，输入以下命令以配置Shell。
+
+```.bashrc
+function cdls() 
+	{
+		builtin cd "$1" && ls
+	}
+alias g='gvim'
+alias ..='cd ..'
+alias gb='gvim .bashrc'
+alias cd="cdls"
+alias py='python3'
+alias rp='realpath'
+alias h='history'
+alias cs='cd /mnt/hgfs/Share'
+alias ch='cd ~/Global_Workspace'
+alias favr='find "$(pwd)" -name "*.v"' # Find All .v Files Recursively 
+alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively 
+```
+
+- 配置完成后`source .bashrc`并重启Terminal，就可以用更简单的命令了。比如我想用Vim打开某个文件，以前需要使用`gvim <file>`命令，现在只需要使用`g <file>`命令即可。
+- 注：上面只是抛砖引玉，主要功能是简化一些命令。`.bashrc`的自定义程度很高，读者可以自行配置。
+
 # 2 Vim
 - Vim 分为多种操作模式：正常模式 `Normal mode`、插入模式 `Insert mode`、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
 - 用 Vim 编辑器打开文件后，默认进入正常模式 [2.1 正常模式](#21-正常模式)。在正常模式进行某些操作以进入其他模式，详情见 [2.2 嵌入模式](#22-嵌入模式) ~ [2.6 替换模式](#26-替换模式)。
