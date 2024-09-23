@@ -1,4 +1,10 @@
 # 1 Linux
+## 1.0 `man`*
+- `man`：==最重要的命令！Read The Friendly Manual！==
+- `man <command>`：当您的英文足够好时，您只需要用这一个命令就可以学会整个 Linux 操作系统。其功能是打开 `<command>` 这项命令的操作指南。
+- 举例：`man man`/`man ls`/`man cp`。
+- 注：[#1.0 man](#10-man)~[#1.6 其他命令](#16-其他命令) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>`。
+
 ## 1.9 配置Shell
 - 在开始本章节前，需要先确定您的shell类型。常见的shell类型有bash/csh/zsh等等。
 - 使用`echo $SHELL`命令查看您的shell类型。
