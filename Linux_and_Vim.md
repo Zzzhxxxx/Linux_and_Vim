@@ -1,9 +1,9 @@
 # 1 Linux
 ## 1.0 `man`*
-- `man`：==最重要的命令！Read The Friendly Manual！==
+- `man`：**最重要的命令！Read The Friendly Manual！**
 - `man <command>`：当您的英文足够好时，您只需要用这一个命令就可以学会整个 Linux 操作系统。其功能是打开 `<command>` 这项命令的操作指南。
 - 举例：`man man`/`man ls`/`man cp`。
-- 注：[#1.0 man](#10-man)~[#1.6 其他命令](#16-其他命令) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>`。
+- 注：[1.0 man](#10-man)~[1.6 其他命令](#16-其他命令) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>`。
 
 ## 1.9 配置Shell
 - 在开始本章节前，需要先确定您的shell类型。常见的shell类型有bash/csh/zsh等等。
@@ -16,8 +16,8 @@ cd ~
 givm .bashrc
 ```
 
-- 注：如果您的Shell不是bash，可以在home目录下使用`ls -a`命令查看名为`.<shell_type>rc`的文件并打开它。这里的`rc`意为`run commands`，代表启动Shell时自动执行的命令。[[#2.6 配置Vim]]中的`.vimrc`也是同样的道理。
-- 打开`.bashrc`文件后，输入以下命令以配置Shell。
+- 注：如果您的 Shell 不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的`.vimrc`也是同样的道理。
+- 打开`.bashrc`文件后，输入以下命令以配置 Shell。
 
 ```.bashrc
 function cdls() 
