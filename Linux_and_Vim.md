@@ -12,7 +12,7 @@
 | `tee` | T（形似分岔路口） | 将数据流向2个方向 |
 | `xargs` | e**x**tended**arg**ument**s** | 从输入接收数据，并把这些数据作为参数提供给另一个命令 |
 
-- 重定向：在Linux中，重定向Redirection是一种常见的功能，它允许你改变命令的标准输入输出流。在命令行中，重定向可以将命令的输出从默认的Terminal转移到一个文件，或者将文件的内容作为命令的输入，甚至是将一个命令的输出直接作为另一个命令的输入。在Linux中有如下几种基础重定向操作（还有很多高级重定向操作，读者可以自行探索）：
+- 重定向：在 Linux 中，重定向 Redirection 是一种常见的功能，它允许你改变命令的标准输入输出流。在命令行中，重定向可以将命令的输出从默认的 Terminal 转移到一个文件，或者将文件的内容作为命令的输入，甚至是将一个命令的输出直接作为另一个命令的输入。在 Linux 中有如下几种基础重定向操作（还有很多高级重定向操作，读者可以自行探索）：
 
 | 符号 | 说明 | 举例 |
 | :--: | :--: | :--: |
@@ -22,8 +22,8 @@
 | `2>` | 标准错误重定向：将命令的错误输出写入到文件中 | `ls <not_exist_file> 2> error.log` |
 
 - 由于使用尖括号的缘故，上表可能看起来有些不易理解，请读者多点耐心辨识重定向符号。
-- 管道`|`：将管道前命令的输出直接作为管道后命令的输入，可以理解为特殊的重定向。
-- 您可以在Terminal中分别输入：
+- 管道 `|`：将管道前命令的输出直接作为管道后命令的输入，可以理解为特殊的重定向。
+- 您可以在 Terminal 中分别输入：
 
 ```Terminal
 seq 1 10
@@ -31,21 +31,21 @@ seq 1 10 | shuf
 seq 1 10 | shuf | sort -n
 ```
 
-- 比较一下输出的结果有何不同，据此结果思考这些命令中蕴含了什么样的重定向过程（注：`shuf`的功能是乱序，`sort -n`的功能是按数字大小排序）。
+- 比较一下输出的结果有何不同，据此结果思考这些命令中蕴含了什么样的重定向过程（注：`shuf` 的功能是乱序，`sort -n` 的功能是按数字大小排序）。
 
 ## 1.9 配置Shell
-- 在开始本章节前，需要先确定您的shell类型。常见的shell类型有bash/csh/zsh等等。
-- 使用`echo $SHELL`命令查看您的shell类型。
-- 如果返回的是`/bin/bash`，说明您的shell类型是bash（下面的操作暂时以bash为例）。
-- 进入`home`目录，然后打开`.bashrc`文件：
+- 在开始本章节前，需要先确定您的 shell 类型。常见的 shell 类型有 bash/csh/zsh 等等。
+- 使用 `echo $SHELL` 命令查看您的 shell 类型。
+- 如果返回的是 `/bin/bash`，说明您的 shell 类型是 bash（下面的操作暂时以 bash 为例）。
+- 进入 `home` 目录，然后打开 `.bashrc` 文件：
 
 ```shell
 cd ~
 givm .bashrc
 ```
 
-- 注：如果您的 Shell 不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的`.vimrc`也是同样的道理。
-- 打开`.bashrc`文件后，输入以下命令以配置 Shell。
+- 注：如果您的 Shell 不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
+- 打开 `.bashrc` 文件后，输入以下命令以配置 Shell。
 
 ```.bashrc
 function cdls() 
@@ -65,8 +65,8 @@ alias favr='find "$(pwd)" -name "*.v"' # Find All .v Files Recursively
 alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively 
 ```
 
-- 配置完成后`source .bashrc`并重启Terminal，就可以用更简单的命令了。比如我想用Vim打开某个文件，以前需要使用`gvim <file>`命令，现在只需要使用`g <file>`命令即可。
-- 注：上面只是抛砖引玉，主要功能是简化一些命令。`.bashrc`的自定义程度很高，读者可以自行配置。
+- 配置完成后 `source .bashrc` 并重启 Terminal，就可以用更简单的命令了。比如我想用 Vim 打开某个文件，以前需要使用 `gvim <file>` 命令，现在只需要使用 `g <file>` 命令即可。
+- 注：上面只是抛砖引玉，主要功能是简化一些命令。`.bashrc` 的自定义程度很高，读者可以自行配置。
 
 # 2 Vim
 - Vim 分为多种操作模式：正常模式 `Normal mode`、插入模式 `Insert mode`、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
