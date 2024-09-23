@@ -1,3 +1,4 @@
+# 1 Linux
 ## 1.9 配置Shell
 - 在开始本章节前，需要先确定您的shell类型。常见的shell类型有bash/csh/zsh等等。
 - 使用`echo $SHELL`命令查看您的shell类型。
