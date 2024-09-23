@@ -251,3 +251,22 @@ Bright vixens jump; dozy fowl quack.
 | `<Ctrl> - f`/`<PgDown>` | 向下翻一页 |
 | `<Ctrl> - b`/`<PgUp>` | 向上翻一页 |
 | `%` | 如果光标当前位置是括号`( ) [ ] { }`，将光标移动到配对的括号上 |
+
+## 2.8 配置Vim
+在`.vimrc`文件中输入以下命令以配置Vim（`.vimrc`的路径也在home目录下，详情见[[#1.9 配置Shell]]）：
+
+```.vimrc
+syntax on
+set number
+set cursorline
+set cursorcolumn
+set ruler
+set tabstop=4
+set autoindent
+set guicursor+=a:blinkon0
+set lines=50
+set columns=150
+setlocal noswapfile
+```
+
+- 这里也只是提供一些参考，读者可以自行寻找适合自己的配置文件。
