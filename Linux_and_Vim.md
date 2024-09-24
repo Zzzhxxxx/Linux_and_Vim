@@ -33,6 +33,18 @@ seq 1 10 | shuf | sort -n
 
 - 比较一下输出的结果有何不同，据此结果思考这些命令中蕴含了什么样的重定向过程（注：`shuf` 的功能是乱序，`sort -n` 的功能是按数字大小排序）。
 
+## 1.5 系统监控
+
+| 命令 | 全称 | 说明 |
+| :--: | :--: | :--: |
+| `jobs` | jobs | 列出当前 shell 会话中的所有任务 |
+| `ps` | process status | 显示当前系统中的活动进程 |
+| `top` | table of process | 实时显示系统中进程的动态实时视图 |
+| `kill` | kill | 发送特定的信号到进程，通常用来终止进程 |
+| `free` | free memory | 提供关于系统内存使用情况的信息 |
+| `dmesg` | display message | 显示 Linux 内核的消息缓冲区 |
+| `lsof` | list open files | 在系统中列出打开的文件和使用这些文件的进程 |
+
 ## 1.9 配置Shell
 - 在开始本章节前，需要先确定您的 shell 类型。常见的 shell 类型有 bash/csh/zsh 等等。
 - 使用 `echo $SHELL` 命令查看您的 shell 类型。
