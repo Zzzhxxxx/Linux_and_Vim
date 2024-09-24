@@ -5,6 +5,21 @@
 - 举例：`man man`/`man ls`/`man cp`。
 - 注：[1.0 man](#10-man)~[1.6 其他命令](#16-其他命令) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>`。
 
+## 1.1 文件管理
+
+| 命令 | 全称 | 说明 |
+| :--: | :--: | :--: |
+| `cd` | change directory | 进入文件夹 |
+| `pwd` | print work directory | 输出当前路径 |
+| `mkdir` | make directory | 建立文件夹 |
+| `rmdir` | remove directory | 删除文件夹 |
+| `ls` | list | 列出当前路径下的文件 |
+| `cp` | copy | 复制文件 |
+| `rm` | remove | 删除文件 |
+| `mv` | move | 移动文件 |
+| `tar` | tape archive | 创建、查看和提取归档文件 |
+| `chmod` | change mode | 改变文件权限 |
+
 ## 1.3 输入输出控制
 
 | 命令 | 全称 | 说明 |
