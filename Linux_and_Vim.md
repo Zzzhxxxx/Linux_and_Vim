@@ -72,6 +72,16 @@ seq 1 10 | shuf | sort -n
 | `dmesg` | display message | 显示 Linux 内核的消息缓冲区 |
 | `lsof` | list open files | 在系统中列出打开的文件和使用这些文件的进程 |
 
+## 1.8 终端操作
+
+| 操作 | 说明 |
+| :--: | :--: |
+| `<Ctrl> - u` | 剪切从光标位置到行首的文本 |
+| `<Ctrl> - k` | 剪切从光标位置到行尾的文本 |
+| `<Ctrl> - a` | 移动光标到行首 |
+| `<Ctrl> - e` | 移动光标到行尾 |
+| `<Ctrl> - l` | 清空屏幕，移动光标到左上角，和 `clear` 作用相同 |
+
 ## 1.9 配置 shell
 - 在开始本章节前，需要先确定您的 shell 类型。常见的 shell 类型有 bash/csh/zsh 等等。
 - 使用 `echo $SHELL` 命令查看您的 shell 类型。
