@@ -99,6 +99,7 @@
 | `-b`  | number non-blank lines | `cat -b <file>`  | 显示文件内容并为非空行编号 |
 | `-s`  | squeeze blank | `cat -s <file>`  | 压缩多余的空白行 |
 | `-A`  | show all | `cat -A <file>`  | 显示文件的不可见字符 |
+| 无 | 无 | `cat <file> <file2> > <new_file>` | 合并文件 |
 
 ### 1.2.2 `find`
 
