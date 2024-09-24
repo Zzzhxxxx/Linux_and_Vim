@@ -1,7 +1,7 @@
 # 1 Linux
 ## 1.0 `man`
 - `man`：**最重要的命令！Read The Friendly Manual！**
-- `man <command>`：当您的英文足够好时，您只需要用这一个命令就可以学会整个 Linux 操作系统。其功能是打开 `<command>` 这项命令的操作指南。
+- `man <command>`：如果您的英文水平较好，凭借这个命令，您几乎可以掌握整个 Linux 系统的操作。其功能是打开 `<command>` 这项命令的操作指南。
 - 举例：`man man`/`man ls`/`man cp`。
 - 注：[1.0 man](#10-man)~[1.6 其他命令](#16-其他命令) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>`。
 
