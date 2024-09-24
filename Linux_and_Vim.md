@@ -85,7 +85,7 @@ seq 1 10 | shuf | sort -n
 | `dmesg` | display message | 显示 Linux 内核的消息缓冲区 |
 | `lsof` | list open files | 在系统中列出打开的文件和使用这些文件的进程 |
 
-## 1.8 终端操作
+## 1.6 终端操作
 
 | 操作 | 说明 |
 | :--: | :--: |
@@ -95,7 +95,7 @@ seq 1 10 | shuf | sort -n
 | `<Ctrl> - e` | 移动光标到行尾 |
 | `<Ctrl> - l` | 清空屏幕，移动光标到左上角，和 `clear` 作用相同 |
 
-## 1.9 配置 shell
+## 1.7 配置 shell
 - 在开始本章节前，需要先确定您的 shell 类型。常见的 shell 类型有 bash/csh/zsh 等等。
 - 使用 `echo $SHELL` 命令查看您的 shell 类型。
 - 如果返回的是 `/bin/bash`，说明您的 shell 类型是 bash（下面的操作暂时以 bash 为例）。
@@ -385,7 +385,7 @@ Bright vixens jump; dozy fowl quack.
 | `%` | 如果光标当前位置是括号`( ) [ ] { }`，将光标移动到配对的括号上 |
 
 ## 2.8 配置Vim
-在`.vimrc`文件中输入以下命令以配置Vim（`.vimrc`的路径也在home目录下，详情见 [1.9 配置Shell](#19-配置Shell)）：
+在`.vimrc`文件中输入以下命令以配置Vim（`.vimrc`的路径也在home目录下，详情见 [1.7 配置Shell](#17-配置Shell)）：
 
 ```.vimrc
 syntax on
