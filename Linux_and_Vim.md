@@ -20,6 +20,18 @@
 | `tar` | tape archive | 创建、查看和提取归档文件 |
 | `chmod` | change mode | 改变文件权限 |
 
+## 1.2 文件检索
+
+| 命令 | 全称 | 说明 |
+| :--: | :--: | :--: |
+| `cat` | concatenate | 合并多个文件的内容 |
+| `more` | more | 尽可能多地读文件 |
+| `less` | less | 尽可能少地读文件 |
+| `head` | head | 显示文件的前几行 |
+| `tail` | tail | 显示文件的后几行 |
+| `file` | file | 确定文件的类型 |
+| `find` | find | 搜索文件 |
+
 ## 1.3 输入输出控制
 
 | 命令 | 全称 | 说明 |
