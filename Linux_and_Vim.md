@@ -1,4 +1,6 @@
 # 1 Linux
+- 因为能力有限，此篇只分享我在学习工作过程中的常用命令，Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html
+
 ## 1.0 `man`
 - `man`：**最重要的命令！Read The Friendly Manual！**
 - `man <command>`：如果您的英文水平较好，凭借这个命令，您几乎可以掌握整个 Linux 系统的操作。其功能是打开 `<command>` 这项命令的操作指南。
@@ -138,7 +140,7 @@ seq 1 10 | shuf | sort -n
 
 - 比较一下输出的结果有何不同，据此结果思考这些命令中蕴含了什么样的重定向过程（注：`shuf` 的功能是乱序，`sort -n` 的功能是按数字大小排序）。
 
-## 1.4 文本处理（待补充）
+## 1.4 文本处理（待修改）
 
 | 命令 | 全称 | 说明 |
 | :--: | :--: | :--: |
@@ -153,9 +155,28 @@ seq 1 10 | shuf | sort -n
 
 ### 1.4.1 `grep`
 
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-i`  | ignore case | `grep -i <str> <file>`  | 忽略大小写进行匹配 |
+| `-v`  | invert match | `grep -v <str> <file>`  | 显示不匹配指定模式的行 |
+| `-r`  | recursive | `grep -r <str> <path>`  | 递归查找目录中的匹配项 |
+| `-n`  | line number | `grep -n <str> <file>`  | 显示匹配行的行号 |
+
 ### 1.4.2 `awk`
 
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-F`  | field separator | `awk -F ":" '{print $1}' <file>`  | 指定字段分隔符 |
+| `-v`  | assign variable | `awk -v var=value '{print var, $1}' <file>`  | 在脚本中赋值变量 |
+| `-f`  | script file | `awk -f script.awk <file>`  | 从文件中读取 AWK 脚本 |
+
 ### 1.4.3 `sed`
+
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-e`  | expression | `sed -e 's/old/new/' file`  | 指定要执行的 sed 脚本 |
+| `-i`  | in-place | `sed -i 's/old/new/' file`  | 直接在文件中进行替换 |
+| `-n`  | suppress printing | `sed -n '/pattern/p' file`  | 只显示匹配的行 |
 
 ## 1.5 系统监控
 
