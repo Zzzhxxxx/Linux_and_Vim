@@ -94,8 +94,8 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 
 | 命令 | 说明 |
 | :--: | :--: |
-| `gvim <line_number> <file>` | 打开文件并直接定位到指定行 |
-| `gvim <file>` | 打开文件并直接定位到最后一行 |
+| `gvim +<line_number> <file>` | 打开文件并直接定位到指定行 |
+| `gvim + <file>` | 打开文件并直接定位到最后一行 |
 | `gvim -d <file1> <file2>` | 以差异模式打开 Vim 编辑器，用来对比多个文件并高亮它们的差异 |
 
 ## 2.1 正常模式
