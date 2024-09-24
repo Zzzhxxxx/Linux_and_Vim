@@ -134,7 +134,7 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 - 网上关于正则表达式的教程有很多，我主要参考以下几个网站：
 	- 菜鸟教程：https://www.runoob.com/regexp/regexp-tutorial.html
  	- 鸟哥：https://linux.vbird.org/linux_basic/centos7/0330regularex.php
-  	- MIT课程：https://missing-semester-cn.github.io/2020/data-wrangling/
+  	- MIT 课程：https://missing-semester-cn.github.io/2020/data-wrangling/
 - 我个人的理解是，初学时没必要从头到尾全部学会，因为内容较多并且如果长时间不用会容易忘记。所以我建议先学会一些基础的正则表达式，待到实际应用中将这几个网站当作手册查阅，做到用以致学。
 
 # 2 Vim
