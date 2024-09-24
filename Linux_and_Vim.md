@@ -36,10 +36,10 @@
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-r` | recursive | `rm -r folder`  | 递归删除目录及其内容 |
-| `-f` | force | `rm -f file`  | 强制删除文件或目录，不提示确认 |
-| `-i` | interactive | `rm -i file`  | 删除前提示用户确认 |
-| `-v` | verbose | `rm -v file`  | 显示删除过程中的详细信息 |
+| `-r` | recursive | `rm -r <directory>`  | 递归删除目录及其内容 |
+| `-f` | force | `rm -f <file>`  | 强制删除文件或目录，不提示确认 |
+| `-i` | interactive | `rm -i <file>`  | 删除前提示用户确认 |
+| `-v` | verbose | `rm -v <file>`  | 显示删除过程中的详细信息 |
 
 ### 1.1.3 `mv`
 
@@ -54,19 +54,19 @@
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-cvf` | create verbose file | `tar -cvf archive.tar file`  | 创建一个名为 `archive.tar` 的压缩文件 |
+| `-cvf` | create verbose file | `tar -cvf archive.tar <file>`  | 创建一个名为 `archive.tar` 的压缩文件 |
 | `-xvf` | extract verbose file | `tar -xvf archive.tar`  | 解压 `archive.tar` 文件 |
-| `-zcvf` | gzip create verbose file | `tar -zcvf archive.tar.gz file`  | 使用 gzip 压缩文件，创建 `archive.tar.gz` 文件 |
+| `-zcvf` | gzip create verbose file | `tar -zcvf archive.tar.gz <file>`  | 使用 gzip 压缩文件，创建 `archive.tar.gz` 文件 |
 | `-tvf` | table verbose file | `tar -tvf archive.tar`  | 查看 `archive.tar` 文件中的内容 |
 
 ### 1.1.5 `chmod`
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-R` | recursive | `chmod -R 755 /directory`  | 递归修改目录及其内容的权限 |
-| `+x` | add execute permission | `chmod +x script.sh`  | 为 `script.sh` 文件添加执行权限 |
-| `u+x` | user add execute permission | `chmod u+x file`  | 为文件的所有者添加执行权限 |
-| `g-w` | group remove write permission | `chmod g-w file`  | 移除组对文件的写权限 |
+| `-R` | recursive | `chmod -R 755 <directory>`  | 递归修改目录及其内容的权限 |
+| `+x` | add execute permission | `chmod +x <file>`  | 为 `script.sh` 文件添加执行权限 |
+| `u+x` | user add execute permission | `chmod u+x <file>`  | 为文件的所有者添加执行权限 |
+| `g-w` | group remove write permission | `chmod g-w <file>`  | 移除组对文件的写权限 |
 | `755` | 无 | `chmod 755 file`  | 将文件权限设置为 `rwxr-xr-x` |
 
 - 注：`chmod 755` 中的三个数字分别代表文件权限的设置，具体含义如下：
@@ -93,7 +93,21 @@
 
 ### 1.2.1 `cat`
 
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-n`  | number lines | `cat -n <file>`  | 显示文件内容并为每一行编号 |
+| `-b`  | number non-blank lines | `cat -b <file>`  | 显示文件内容并为非空行编号 |
+| `-s`  | squeeze blank | `cat -s <file>`  | 压缩多余的空白行 |
+| `-A`  | show all | `cat -A <file>`  | 显示文件的不可见字符 |
+
 ### 1.2.2 `find`
+
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-name`  | name | `find . -name "*.txt"`  | 在当前目录及子目录中查找以 `.txt` 结尾的文件 |
+| `-type`  | type | `find <path> -type d`  | 查找目录文件 |
+| `-size`  | size | `find <path> -size +1M`  | 查找大于 1MB 的文件 |
+| `-exec`  | execute | `find <path> -name "*.log" -exec rm {} \\;`  | 查找到符合条件的文件后执行指定的命令 |
 
 ## 1.3 输入输出控制
 
