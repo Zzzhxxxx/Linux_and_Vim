@@ -45,7 +45,7 @@ seq 1 10 | shuf | sort -n
 | `dmesg` | display message | 显示 Linux 内核的消息缓冲区 |
 | `lsof` | list open files | 在系统中列出打开的文件和使用这些文件的进程 |
 
-## 1.9 配置Shell
+## 1.9 配置 shell
 - 在开始本章节前，需要先确定您的 shell 类型。常见的 shell 类型有 bash/csh/zsh 等等。
 - 使用 `echo $SHELL` 命令查看您的 shell 类型。
 - 如果返回的是 `/bin/bash`，说明您的 shell 类型是 bash（下面的操作暂时以 bash 为例）。
@@ -56,8 +56,8 @@ cd ~
 givm .bashrc
 ```
 
-- 注：如果您的 Shell 不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
-- 打开 `.bashrc` 文件后，输入以下命令以配置 Shell。
+- 注：如果您的 shell 类型不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
+- 打开 `.bashrc` 文件后，输入以下命令以配置 shell。
 
 ```.bashrc
 function cdls() 
