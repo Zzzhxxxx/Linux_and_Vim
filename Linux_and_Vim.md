@@ -22,50 +22,50 @@
 
 ### 1.1.1 `ls`
 
-| **选项**        | **举例**            | **说明**                                        |
-|-----------------|---------------------|-------------------------------------------------|
-| `-l`            | `ls -l`             | 以长格式显示文件详细信息                        |
-| `-a`            | `ls -a`             | 显示包括隐藏文件在内的所有文件                  |
-| `-h`            | `ls -lh`            | 以可读的文件大小格式显示文件信息                |
-| `-R`            | `ls -R`             | 递归列出当前目录及其子目录的文件                |
-| `-t`            | `ls -lt`            | 按时间排序文件                                  |
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-l`  | long listing format | `ls -l`  | 以长格式显示文件详细信息 |
+| `-a`  | all files | `ls -a`  | 显示包括隐藏文件在内的所有文件 |
+| `-h`  | human-readable | `ls -lh` | 以可读的文件大小格式显示文件信息 |
+| `-R`  | recursive | `ls -R`  | 递归列出当前目录及其子目录的文件 |
+| `-t`  | sort by modification time | `ls -lt` | 按时间排序文件 |
 
 ### 1.1.2 `rm`
 
-| **选项**        | **举例**                | **说明**                                        |
-|-----------------|-------------------------|-------------------------------------------------|
-| `-r`            | `rm -r folder`           | 递归删除目录及其内容                            |
-| `-f`            | `rm -f file`             | 强制删除文件或目录，不提示确认                  |
-| `-i`            | `rm -i file`             | 删除前提示用户确认                              |
-| `-v`            | `rm -v file`             | 显示删除过程中的详细信息                        |
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-r`  | recursive | `rm -r folder`  | 递归删除目录及其内容 |
+| `-f`  | force | `rm -f file`  | 强制删除文件或目录，不提示确认 |
+| `-i`  | interactive | `rm -i file`  | 删除前提示用户确认 |
+| `-v`  | verbose | `rm -v file`  | 显示删除过程中的详细信息 |
 
 ### 1.1.3 `mv`
 
-| **选项**        | **举例**                      | **说明**                                        |
-|-----------------|-------------------------------|-------------------------------------------------|
-| 无              | `mv file1 file2`               | 将 `file1` 重命名为 `file2`                      |
-| 无              | `mv file1 /path/to/directory/` | 将文件 `file1` 移动到指定目录                    |
-| `-i`            | `mv -i file1 file2`            | 移动或覆盖前提示用户确认                         |
-| `-u`            | `mv -u file1 file2`            | 仅在 `file1` 比 `file2` 更新时才进行移动或覆盖   |
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| 无 | 无 | `mv <file1> <file2>` | 将 `file1` 重命名为 `file2` |
+| 无 | 无 | `mv <file1> </path/to/directory/>` | 将文件 `file1` 移动到指定目录 |
+| `-i`  | interactive | `mv -i <file1> <file2>`  | 移动或覆盖前提示用户确认 |
+| `-u`  | update | `mv -u <file1> <file2>`  | 仅在 `file1` 比 `file2` 更新时才进行移动或覆盖 |
 
 ### 1.1.4 `tar`
 
-| **选项**        | **举例**                        | **说明**                                        |
-|-----------------|---------------------------------|-------------------------------------------------|
-| `-cvf`          | `tar -cvf archive.tar file`     | 创建一个名为 `archive.tar` 的压缩文件            |
-| `-xvf`          | `tar -xvf archive.tar`          | 解压 `archive.tar` 文件                         |
-| `-zcvf`         | `tar -zcvf archive.tar.gz file` | 使用 gzip 压缩文件，创建 `archive.tar.gz` 文件   |
-| `-tvf`          | `tar -tvf archive.tar`          | 查看 `archive.tar` 文件中的内容                 |
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-cvf`  | create verbose file | `tar -cvf archive.tar file`  | 创建一个名为 `archive.tar` 的压缩文件 |
+| `-xvf`  | extract verbose file | `tar -xvf archive.tar`  | 解压 `archive.tar` 文件 |
+| `-zcvf` | gzip create verbose file | `tar -zcvf archive.tar.gz file`  | 使用 gzip 压缩文件，创建 `archive.tar.gz` 文件 |
+| `-tvf`  | table verbose file | `tar -tvf archive.tar`  | 查看 `archive.tar` 文件中的内容 |
 
 ### 1.1.5 `chmod`
 
-| **选项**        | **举例**                       | **说明**                                        |
-|-----------------|--------------------------------|-------------------------------------------------|
-| `-R`            | `chmod -R 755 /directory`      | 递归修改目录及其内容的权限                      |
-| `+x`            | `chmod +x script.sh`           | 为 `script.sh` 文件添加执行权限                 |
-| `u+x`           | `chmod u+x file`               | 为文件的所有者添加执行权限                      |
-| `g-w`           | `chmod g-w file`               | 移除组对文件的写权限                            |
-| `755`           | `chmod 755 file`               | 将文件权限设置为 `rwxr-xr-x`                    |
+| 选项 | 全称 | 举例 | 说明 |
+| :--: | :--: | :--: | :--: |
+| `-R`  | recursive | `chmod -R 755 /directory`  | 递归修改目录及其内容的权限 |
+| `+x`  | add execute permission | `chmod +x script.sh`  | 为 `script.sh` 文件添加执行权限 |
+| `u+x` | user add execute permission | `chmod u+x file`  | 为文件的所有者添加执行权限 |
+| `g-w` | group remove write permission | `chmod g-w file`  | 移除组对文件的写权限 |
+| `755`  | owner read/write/execute | `chmod 755 file`  | 将文件权限设置为 `rwxr-xr-x` |
 
 ## 1.2 文件检索（待补充）
 
