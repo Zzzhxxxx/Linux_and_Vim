@@ -135,7 +135,7 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 	- 菜鸟教程：https://www.runoob.com/regexp/regexp-tutorial.html
  	- 鸟哥：https://linux.vbird.org/linux_basic/centos7/0330regularex.php
   	- MIT课程：https://missing-semester-cn.github.io/2020/data-wrangling/
-- 我个人的理解是，初学时没必要从头到尾全部学会
+- 我个人的理解是，初学时没必要从头到尾全部学会，因为内容较多并且如果长时间不用会容易忘记。所以我建议先学会一些基础的正则表达式，待到实际应用中将这几个网站当作手册查阅，做到用以致学。
 
 # 2 Vim
 - Vim 分为多种操作模式：正常模式 `Normal mode`、插入模式 `Insert mode`、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
