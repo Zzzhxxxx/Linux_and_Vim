@@ -142,9 +142,9 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 
 ## 2.0 进入 Vim
 - 通过 `vi/vim/gvim <file>` 命令用 Vim 编辑器打开文件。
-  - Vim 是 vi 的升级版本，它不仅兼容 vi 的所有指令，而且还支持新的特性。
-  - `gvim` 命令和 `vim` 命令的区别在于：`vim` 占用原来的 Terminal 打开文件，`gvim` 可以不占用原来的 Terminal 直接打开文件。
-  - 综上所述，建议使用 `gvim <file>` 打开文件。
+	- Vim 是 vi 的升级版本，它不仅兼容 vi 的所有指令，而且还支持新的特性。
+	- `gvim` 命令和 `vim` 命令的区别在于：`vim` 占用原来的 Terminal 打开文件，`gvim` 可以不占用原来的 Terminal 直接打开文件。
+	- 综上所述，建议使用 `gvim <file>` 打开文件。
 - 和 Linux 类似，进入 Vim 的命令也可以选择 `<option>`。
 
 | 命令 | 说明 |
@@ -155,8 +155,8 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 
 ## 2.1 正常模式
 - 本文先介绍的是正常模式。
-  - 如果您的 Linux 中没有可以编辑的文件，可以先 `gvim <your_file_name>` 新建一个空白的文件，然后移步到 [2.2 嵌入模式](#22-嵌入模式) 试着输入一些文本后再回到此节。方便起见，我这里也提供了一份文本，您可以直接复制到 Vim 中（此文本来自于 AI 生成）。
-  - 如果您的 Linux 中有可以编辑的文件，直接 `gvim <your_file_name>` 打开它，我们要开始了！
+	- 如果您的 Linux 中没有可以编辑的文件，可以先 `gvim <your_file_name>` 新建一个空白的文件，然后移步到 [2.2 嵌入模式](#22-嵌入模式) 试着输入一些文本后再回到此节。方便起见，我这里也提供了一份文本，您可以直接复制到 Vim 中（此文本来自于 AI 生成）。
+	- 如果您的 Linux 中有可以编辑的文件，直接 `gvim <your_file_name>` 打开它，我们要开始了！
 
 ```Text
 The quick brown fox jumps over the lazy dog.
