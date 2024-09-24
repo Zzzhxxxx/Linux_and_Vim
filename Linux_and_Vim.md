@@ -131,7 +131,9 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 - 注：上面只是抛砖引玉，主要功能是简化一些命令。`.bashrc` 的自定义程度很高，读者可以自行配置。
 
 ## 1.8 正则表达式
-- 详情见：https://www.runoob.com/regexp/regexp-tutorial.html
+- 网上关于正则表达式的教程有很多，我主要参考以下几个网站：
+	- 菜鸟教程：https://www.runoob.com/regexp/regexp-tutorial.html
+ 	- 鸟哥：https://linux.vbird.org/linux_basic/centos7/0330regularex.php
 
 # 2 Vim
 - Vim 分为多种操作模式：正常模式 `Normal mode`、插入模式 `Insert mode`、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
