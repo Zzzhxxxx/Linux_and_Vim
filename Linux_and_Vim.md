@@ -130,6 +130,9 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 - 配置完成后 `source .bashrc` 并重启 Terminal，就可以用更简单的命令了。比如我想用 Vim 打开某个文件，以前需要使用 `gvim <file>` 命令，现在只需要使用 `g <file>` 命令即可。
 - 注：上面只是抛砖引玉，主要功能是简化一些命令。`.bashrc` 的自定义程度很高，读者可以自行配置。
 
+## 1.8 正则表达式
+- 详情见：https://www.runoob.com/regexp/regexp-tutorial.html
+
 # 2 Vim
 - Vim 分为多种操作模式：正常模式 `Normal mode`、插入模式 `Insert mode`、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
 - 用 Vim 编辑器打开文件后，默认进入正常模式 [2.1 正常模式](#21-正常模式)。在正常模式进行某些操作以进入其他模式，详情见 [2.2 嵌入模式](#22-嵌入模式) ~ [2.6 替换模式](#26-替换模式)。
