@@ -30,6 +30,8 @@
 | `-R` | recursive | `ls -R`  | 递归列出当前目录及其子目录的文件 |
 | `-t` | sort by modification time | `ls -lt` | 按时间排序文件 |
 
+- 注：这里 `ls -lh` 的意思其实是 `ls -l -h`的简写，Linux 支持这种简写，并不是笔误。
+
 ### 1.1.2 `rm`
 
 | 选项 | 全称 | 举例 | 说明 |
