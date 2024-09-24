@@ -26,9 +26,9 @@
 - 您可以在 Terminal 中分别输入：
 
 ```Terminal
-seq一10
-seq一10 | shuf
-seq一10 | shuf | sort -n
+seq 1 10
+seq 1 10 | shuf
+seq 1 10 | shuf | sort -n
 ```
 
 - 比较一下输出的结果有何不同，据此结果思考这些命令中蕴含了什么样的重定向过程（注：`shuf` 的功能是乱序，`sort -n` 的功能是按数字大小排序）。
