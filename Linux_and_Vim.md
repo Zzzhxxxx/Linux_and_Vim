@@ -65,12 +65,14 @@
 | `j` | bzip2 | 使用 bzip2 压缩归档文件 |
 | `a` | automatic | 自动选择压缩方式 |
 
-下面用我将以更具体的例子进行解释：
+- 下面用我将用更具体的例子进行解释：
 
 | 举例 | 说明 |
 | :--: | :--: |
 | `tar -cvf <archive.tar> <file1> <file2> <directory>` | 将文件 file1、file2 和 directory 打包到一个名为 archive.tar 的归档文件中 |
-| `tar -xvf archive.tar` | 解压名为 archive.tar 的归档文件，还原其中包含的文件和目录 |
+| `tar -xvf <archive.tar>` | 解压名为 archive.tar 的归档文件，还原其中包含的文件和目录 |
+| `tar -xzvf <file.tar.gz>` | 解压 tar.gz 格式的归档文件 |
+| `tar -xjvf <file.tar.bz2>` | 解压 tar.bz2 格式的归档文件 |
 
 ### 1.1.5 `chmod`
 
