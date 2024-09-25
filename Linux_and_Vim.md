@@ -1,5 +1,6 @@
 # 1 Linux
-- 因为能力有限，此篇只分享我在学习工作过程中的常用命令，Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html
+- 因为能力有限，此篇只分享我在学习工作过程中的常用命令，Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html。
+- 大多数 `<command>` 会有其专门的 `<option>`，我会列举出一些常用且重要的命令和选项。
 
 ## 1.0 `man`
 - `man`：**最重要的命令！Read The Friendly Manual！**
@@ -251,7 +252,7 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 	- Vim 是 vi 的升级版本，它不仅兼容 vi 的所有指令，而且还支持新的特性。
 	- `gvim` 命令和 `vim` 命令的区别在于：`vim` 占用原来的 Terminal 打开文件，`gvim` 可以不占用原来的 Terminal 直接打开文件。
 	- 综上所述，建议使用 `gvim <file>` 打开文件。
-- 和 Linux 类似，进入 Vim 的命令也可以选择 `<option>`。
+- 和 Linux 其他命令类似，进入 Vim 也可以选择 `<option>`。
 
 | 命令 | 说明 |
 | :--: | :--: |
