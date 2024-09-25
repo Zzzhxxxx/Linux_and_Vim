@@ -1,5 +1,5 @@
 # 1 Linux
-- 因为能力有限，此篇只分享我在学习工作过程中的常用命令。大多数 `<command>` 会有其专门的 `<option>`，我会列举出一些常用且重要的命令和选项。
+- 因为能力有限，此篇只分享我在学习工作过程中的常用命令。大多数 `<command>` 会有其专门的 `<option>`，我会列举出一些常用的命令和选项。
 - Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html
 
 ## 1.0 `man`
@@ -33,7 +33,7 @@
 | `-R` | recursive | `ls -R`  | 递归列出当前目录及其子目录的文件 |
 | `-t` | sort by modification time | `ls -lt` | 按时间排序文件 |
 
-- 注：这里 `ls -lh` 的意思其实是 `ls -l -h`的简写，Linux 支持这种简写，并不是笔误。
+- 注：这里 `ls -lh` 和 `ls -l -h`的作用相同，Linux 支持 `<option>` 合并。
 
 ### 1.1.2 `rm`
 
