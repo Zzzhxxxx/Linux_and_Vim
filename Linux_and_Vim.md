@@ -1,6 +1,6 @@
 # 1 Linux
-- 因为能力有限，此篇只分享我在学习工作过程中的常用命令，Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html 。
-- 大多数 `<command>` 会有其专门的 `<option>`，我会列举出一些常用且重要的命令和选项。
+- 因为能力有限，此篇只分享我在学习工作过程中的常用命令。大多数 `<command>` 会有其专门的 `<option>`，我会列举出一些常用且重要的命令和选项。
+- Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html
 
 ## 1.0 `man`
 - `man`：**最重要的命令！Read The Friendly Manual！**
