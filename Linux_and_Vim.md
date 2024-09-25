@@ -67,7 +67,7 @@
 | :--: | :--: | :--: | :--: |
 | `-R` | recursive | `chmod -R 755 <directory>`  | 递归修改目录及其内容的权限 |
 | `+x` | add execute permission | `chmod +x <file>`  | 为 `script.sh` 文件添加执行权限 |
-| `[ugo][+-][rwx]` | [user/group/others][+/-][read/write/execute] | `chmod u+x <file>`  | 为文件所有者添加执行权限（实际上这个命令有很多种组合） |
+| `[ugo][+-][rwx]` | [user/group/others][+/-][read/write/execute] | `chmod u+x <file>` `chmod go-wx <file>` `chmod u+w g-x <file>` | 这个命令有很多种组合 |
 | `755` | 无 | `chmod 755 file`  | 将文件权限设置为 `rwxr-xr-x` |
 
 - 注：`chmod 755` 中的三个数字分别代表文件权限的设置，具体含义如下：
