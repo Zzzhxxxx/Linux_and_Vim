@@ -79,8 +79,7 @@
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
 | `-R` | recursive | `chmod -R 755 <directory>`  | 递归修改目录及其内容的权限 |
-| `+x` | add execute permission | `chmod +x <file>`  | 为文件添加执行权限 |
-| `[ugo][+-][rwx]` | [user/group/others][+/-][read/write/execute] | `chmod u+x <file>` `chmod go-wx <file>` `chmod u+w g-x <file>` | 这个命令有很多种组合 |
+| `[ugo][+-][rwx]` | [user/group/others][+/-][read/write/execute] | `chmod +x <file>` `chmod go-wx <file>` `chmod u+w g-x <file>` | 修改文件或目录的读、写、执行权限，可以通过多种组合实现 |
 | `755` | 无 | `chmod 755 file`  | 将文件权限设置为 `rwxr-xr-x` |
 
 - 注：`chmod 755` 的三个数字分别表示不同用户的文件权限，每个数字由 **读 (r=4)**、**写 (w=2)** 和 **执行 (x=1)** 的加和值组成：
