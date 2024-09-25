@@ -48,19 +48,29 @@
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| 无 | 无 | `mv <file1> <file2>` | 将 `file1` 重命名为 `file2` |
-| 无 | 无 | `mv <file1> </path/to/directory/>` | 将文件 `file1` 移动到指定目录 |
+| 无 | 无 | `mv <file1> <file2>` | 将 file1 重命名为 file2 |
+| 无 | 无 | `mv <file1> </path/to/directory/>` | 将文件 file1 移动到指定目录 |
 | `-i` | interactive | `mv -i <file1> <file2>`  | 移动或覆盖前提示用户确认 |
-| `-u` | update | `mv -u <file1> <file2>`  | 仅在 `file1` 比 `file2` 更新时才进行移动或覆盖 |
+| `-u` | update | `mv -u <file1> <file2>`  | 仅在 file1 比 file2 更新时才进行移动或覆盖 |
 
 ### 1.1.4 `tar`
 
-| 选项 | 全称 | 举例 | 说明 |
-| :--: | :--: | :--: | :--: |
-| `-cvf` | create verbose file | `tar -cvf archive.tar <file>`  | 创建一个名为 `archive.tar` 的压缩文件 |
-| `-xvf` | extract verbose file | `tar -xvf <file.tar>`  | 解压 tar 文件 |
-| `-zcvf` | gzip create verbose file | `tar -zcvf archive.tar.gz <file>`  | 使用 gzip 压缩文件，创建 `archive.tar.gz` 文件 |
-| `-tvf` | table verbose file | `tar -tvf archive.tar`  | 查看 `archive.tar` 文件中的内容 |
+| 选项 | 全称 | 说明 |
+| :--: | :--: | :--: |
+| `-c` | create | 创建一个新的归档文件 |
+| `-x` | extract | 解压归档文件 |
+| `-v` | verbose | 显示详细操作过程 |
+| `-f` | file | 指定归档文件的名称（必须放在选项列表的最后） |
+| `z` | gzip | 使用 gzip 压缩归档文件 |
+| `j` | bzip2 | 使用 bzip2 压缩归档文件 |
+| `a` | automatic | 自动选择压缩方式 |
+
+下面用我将以更具体的例子进行解释：
+
+| 举例 | 说明 |
+| :--: | :--: |
+| `tar -cvf <archive.tar> <file1> <file2> <directory>` | 将文件 file1、file2 和 directory 打包到一个名为 archive.tar 的归档文件中 |
+| `tar -xvf archive.tar` | 解压名为 archive.tar 的归档文件，还原其中包含的文件和目录 |
 
 ### 1.1.5 `chmod`
 
@@ -108,7 +118,7 @@
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
 | `-name`  | name | `find . -name "*.txt"`  | 在当前目录及子目录中查找以 `.txt` 结尾的文件 |
-| `-type`  | type | `find <path> -type d`  | 查找目录文件 |
+| `-type`  | type | `find <path> -type d`  | 查找目录文件 directory |
 | `-size`  | size | `find <path> -size +1M`  | 查找大于 1MB 的文件 |
 | `-exec`  | execute | `find <path> -name "*.log" -exec rm {} \\;`  | 查找到符合条件的文件后执行指定的命令 |
 
