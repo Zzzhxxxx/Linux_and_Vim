@@ -57,7 +57,7 @@
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
 | `-cvf` | create verbose file | `tar -cvf archive.tar <file>`  | 创建一个名为 `archive.tar` 的压缩文件 |
-| `-xvf` | extract verbose file | `tar -xvf archive.tar`  | 解压 `archive.tar` 文件 |
+| `-xvf` | extract verbose file | `tar -xvf <file.tar>`  | 解压 tar 文件 |
 | `-zcvf` | gzip create verbose file | `tar -zcvf archive.tar.gz <file>`  | 使用 gzip 压缩文件，创建 `archive.tar.gz` 文件 |
 | `-tvf` | table verbose file | `tar -tvf archive.tar`  | 查看 `archive.tar` 文件中的内容 |
 
