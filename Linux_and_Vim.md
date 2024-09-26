@@ -156,8 +156,8 @@ seq 1 10 | shuf | sort -n
 | 命令 | 全称 | 说明 |
 | :--: | :--: | :--: |
 | `grep` | global regular expression print | 搜索文本文件中的匹配模式的行，并显示出来 |
-| `awk` | Aho Weinberger Kernighan | 文本处理工具，用于根据特定模式筛选文本并执行操作，如打印列或计算 |
 | `sed` | stream editor | 流编辑器，逐行处理文件，支持文本替换、插入、删除等操作 |
+| `awk` | Aho Weinberger Kernighan | 文本处理工具，用于根据特定模式筛选文本并执行操作，如打印列或计算 |
 | `sort` | sort | 对文本文件中的行进行排序 |
 | `wc` | word count | 统计文件中的行数、单词数和字节数 |
 | `uniq` | unique | 删除相邻的重复行，常与 `sort` 配合使用以删除整个文件中的重复行 |
@@ -175,15 +175,7 @@ seq 1 10 | shuf | sort -n
 
 - 如果想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb` 。
 
-### 1.4.2 `awk`
-
-| 选项 | 全称 | 举例 | 说明 |
-| :--: | :--: | :--: | :--: |
-| `-F` | field separator | `awk -F ":" '{print $1}' <file>`  | 指定字段分隔符 |
-| `-v` | assign variable | `awk -v var=value '{print var, $1}' <file>`  | 在脚本中赋值变量 |
-| `-f` | script file | `awk -f script.awk <file>`  | 从文件中读取 AWK 脚本 |
-
-### 1.4.3 `sed`
+### 1.4.2 `sed`
 
 - 这个命令一般不会在终端中使用，因为在处理单独文件时 Vim 基本包含 `sed` 的所有功能。所以这个命令一般出现在脚本中，用于处理大批量、重复的文件。
 
@@ -193,8 +185,13 @@ seq 1 10 | shuf | sort -n
 | `-f` | file | `sed -f <script_file> <file>`  | 指定要执行的 sed 脚本文件 |
 | `-i` | in-place | `sed -i 's/old/new/g' <file>`  | 直接在文件中进行替换，而不输出到终端（只有此选项会修改原文件） |
 
-- 我习惯将单引号中的内容称为 `<operator>` 。
+- 我习惯将单引号中的内容称为 `<operator>` , `<operator>` 不止 `s` 一种。
 - `<operator>` 和 Vim 的操作有很多相似之处，建议读者看完 [2 Vim](#2-Vim) 后再探索更多 `sed` 的用法。
+
+### 1.4.3 `awk`
+
+- 我自己的理解是，`awk` 已经不止是一个终端命令，甚至能成为一门专门分析文本的独立语言，我也只在脚本里使用过此命令。
+- 因为此命令较为复杂，由于篇幅限制很难讲清楚，如果您有兴趣请移步：https://www.runoob.com/linux/linux-comm-awk.html 。
 
 ## 1.5 系统监控
 
