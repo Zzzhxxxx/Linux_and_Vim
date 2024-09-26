@@ -49,7 +49,7 @@
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
 | 无 | 无 | `mv <file1> <file2>` | 将 file1 重命名为 file2 |
-| 无 | 无 | `mv <file1> </path/to/directory/>` | 将文件 file1 移动到指定目录 |
+| 无 | 无 | `mv <file> </path/to/directory/>` | 将文件移动到指定目录 |
 | `-i` | interactive | `mv -i <file1> <file2>`  | 移动或覆盖前提示用户确认 |
 | `-u` | update | `mv -u <file1> <file2>`  | 仅在 file1 比 file2 更新时才进行移动或覆盖 |
 
