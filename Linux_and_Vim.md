@@ -108,20 +108,20 @@
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-n`  | number lines | `cat -n <file>`  | 显示文件内容并为每一行编号 |
-| `-b`  | number non-blank lines | `cat -b <file>`  | 显示文件内容并为非空行编号 |
-| `-s`  | squeeze blank | `cat -s <file>`  | 压缩多余的空白行 |
-| `-A`  | show all | `cat -A <file>`  | 显示文件的不可见字符 |
+| `-n` | number lines | `cat -n <file>`  | 显示文件内容并为每一行编号 |
+| `-b` | number non-blank lines | `cat -b <file>`  | 显示文件内容并为非空行编号 |
+| `-s` | squeeze blank | `cat -s <file>`  | 压缩多余的空白行 |
+| `-A` | show all | `cat -A <file>`  | 显示文件的不可见字符 |
 | 无 | 无 | `cat <file> <file2> > <new_file>` | 合并文件 |
 
 ### 1.2.2 `find`
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-name`  | name | `find . -name "*.txt"`  | 在当前目录及子目录中查找以 `.txt` 结尾的文件 |
-| `-type`  | type | `find <path> -type d`  | 查找目录文件 directory |
-| `-size`  | size | `find <path> -size +1M`  | 查找大于 1MB 的文件 |
-| `-exec`  | execute | `find <path> -name "*.log" -exec rm {} \\;`  | 查找到符合条件的文件后执行指定的命令 |
+| `-name` | name | `find . -name "*.txt"`  | 在当前目录及子目录中查找以 `.txt` 结尾的文件 |
+| `-type` | type | `find <path> -type d`  | 查找目录文件 directory |
+| `-size` | size | `find <path> -size +1M`  | 查找大于 1MB 的文件 |
+| `-exec` | execute | `find <path> -name "*.log" -exec rm {} \\;`  | 查找到符合条件的文件后执行指定的命令 |
 
 ## 1.3 输入输出控制
 
@@ -173,23 +173,28 @@ seq 1 10 | shuf | sort -n
 | `-r`  | recursive | `grep -r <str> <directory>`  | 递归查找目录中的匹配项 |
 | `-n`  | line number | `grep -n <str> <file>`  | 显示匹配行的行号 |
 
-- 如果我想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb` 。
+- 如果想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb` 。
 
 ### 1.4.2 `awk`
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-F`  | field separator | `awk -F ":" '{print $1}' <file>`  | 指定字段分隔符 |
-| `-v`  | assign variable | `awk -v var=value '{print var, $1}' <file>`  | 在脚本中赋值变量 |
-| `-f`  | script file | `awk -f script.awk <file>`  | 从文件中读取 AWK 脚本 |
+| `-F` | field separator | `awk -F ":" '{print $1}' <file>`  | 指定字段分隔符 |
+| `-v` | assign variable | `awk -v var=value '{print var, $1}' <file>`  | 在脚本中赋值变量 |
+| `-f` | script file | `awk -f script.awk <file>`  | 从文件中读取 AWK 脚本 |
 
 ### 1.4.3 `sed`
 
+- 这个命令一般不会在终端中使用，因为在处理单独文件时 Vim 基本包含 `sed` 的所有功能。所以这个命令一般出现在脚本中，用于处理大批量、重复的文件。
+
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-e`  | expression | `sed -e 's/old/new/' file`  | 指定要执行的 sed 脚本 |
-| `-i`  | in-place | `sed -i 's/old/new/' file`  | 直接在文件中进行替换 |
-| `-n`  | suppress printing | `sed -n '/pattern/p' file`  | 只显示匹配的行 |
+| `-e` | expression | `sed -e 's/old/new/g' -e 's/foo/bar/g' <file>`  | 指定要执行的 sed 脚本或表达式（可选多个） |
+| `-f` | file | `sed -f <script_file> <file>`  | 指定要执行的 sed 脚本文件 |
+| `-i` | in-place | `sed -i 's/old/new/g' <file>`  | 直接在文件中进行替换，而不输出到终端（只有此选项会修改原文件） |
+
+- 我习惯将单引号中的内容称为 `<motion>` 。
+- `<motion>` 和 Vim 的操作有很多相似之处，建议读者看完 [2 Vim](#2-Vim) 后再探索更多 `sed` 的用法。
 
 ## 1.5 系统监控
 
