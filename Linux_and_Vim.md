@@ -89,7 +89,8 @@
 
 ![image](https://github.com/user-attachments/assets/c775e5c1-c0d7-4cfb-b317-d8498b64dbd9)
 
-- 以这张图片为例（`ll` 是之前提到的 `ls -l` 命令的缩写），add.v 文件的权限是 664，hello 文件夹的权限是 775。第一位 `d` 代表 directory，`-` 代表普通文件。
+- 以这张图片为例（`ll` 是之前提到的 `ls -l` 命令的缩写），add.v 文件的权限是 664，hello 文件夹的权限是 775。
+- 注：第一位 `d` 代表 directory，`-` 代表普通文件。
 
 ## 1.2 文件检索
 
