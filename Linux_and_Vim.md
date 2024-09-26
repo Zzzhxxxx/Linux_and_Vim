@@ -168,10 +168,10 @@ seq 1 10 | shuf | sort -n
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-i`  | ignore case | `grep -i <str> <file>`  | 忽略大小写进行匹配 |
-| `-v`  | invert match | `grep -v <str> <file>`  | 显示不匹配指定模式的行 |
-| `-r`  | recursive | `grep -r <str> <directory>`  | 递归查找目录中的匹配项 |
-| `-n`  | line number | `grep -n <str> <file>`  | 显示匹配行的行号 |
+| `-i`  | ignore case | `grep -i <char> <file>`  | 忽略大小写进行匹配 |
+| `-v`  | invert match | `grep -v <char> <file>`  | 显示不匹配指定模式的行 |
+| `-r`  | recursive | `grep -r <char> <directory>`  | 递归查找目录中的匹配项 |
+| `-n`  | line number | `grep -n <char> <file>`  | 显示匹配行的行号 |
 
 - 如果想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb` 。
 
@@ -181,9 +181,9 @@ seq 1 10 | shuf | sort -n
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-e` | expression | `sed -e 's/old/new/g' -e 's/foo/bar/g' <file>`  | 指定要执行的 sed 脚本或表达式（可选多个） |
+| `-e` | expression | `sed -e 's/<old_char>/<new_char>/g' -e 's/<old_char1>/<new_char1>/g' <file>`  | 指定要执行的 sed 脚本或表达式（可选多个） |
 | `-f` | file | `sed -f <script_file> <file>`  | 指定要执行的 sed 脚本文件 |
-| `-i` | in-place | `sed -i 's/old/new/g' <file>`  | 直接在文件中进行替换，而不输出到终端（只有此选项会修改原文件） |
+| `-i` | in-place | `sed -i 's/<old_char>/<new_char>/g' <file>`  | 直接在文件中进行替换，而不输出到终端（只有此选项会修改原文件） |
 
 - 我习惯将单引号中的内容称为 `<operator>` , `<operator>` 不止 `s` 一种。
 - `<operator>` 和 Vim 的操作有很多相似之处，建议读者看完 [2 Vim](#2-Vim) 后再探索更多 `sed` 的用法。
@@ -376,7 +376,7 @@ Bright vixens jump; dozy fowl quack.
 | `p` \| paste | 粘贴到当前光标位置的后面 |
 | `P` | 粘贴到当前光标位置的前面 |
 
-- 需要注意的是，如果之前是以 `dd`/`5yy` 这种以行为单位的操作实现删除/复制功能之后，`p` 会直接在当前行的下一行粘贴，`P` 会直接在当前行的上一行粘贴，很方便（之后提到的 Line Visual Mode 也会有此特性）。
+- 需要注意的是，如果之前是以 `dd`/`5yy` 这种以行为单位的操作实现删除/复制功能之后，`p` 会直接在当前行的下一行粘贴，`P` 会直接在当前行的上一行粘贴，很方便（之后提到的 `Line Visual Mode` 也会有此特性）。
 
 ### 2.1.5 替换文本
 
