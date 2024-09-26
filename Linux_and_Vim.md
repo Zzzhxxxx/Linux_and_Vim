@@ -193,8 +193,8 @@ seq 1 10 | shuf | sort -n
 | `-f` | file | `sed -f <script_file> <file>`  | 指定要执行的 sed 脚本文件 |
 | `-i` | in-place | `sed -i 's/old/new/g' <file>`  | 直接在文件中进行替换，而不输出到终端（只有此选项会修改原文件） |
 
-- 我习惯将单引号中的内容称为 `<motion>` 。
-- `<motion>` 和 Vim 的操作有很多相似之处，建议读者看完 [2 Vim](#2-Vim) 后再探索更多 `sed` 的用法。
+- 我习惯将单引号中的内容称为 `<operator>` 。
+- `<operator>` 和 Vim 的操作有很多相似之处，建议读者看完 [2 Vim](#2-Vim) 后再探索更多 `sed` 的用法。
 
 ## 1.5 系统监控
 
