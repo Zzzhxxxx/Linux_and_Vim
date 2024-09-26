@@ -27,22 +27,22 @@
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-l` | long listing format | `ls -l`  | 以长格式显示文件详细信息 |
-| `-a` | all files | `ls -a`  | 显示包括隐藏文件在内的所有文件 |
+| `-l` | long listing format | `ls -l` | 以长格式显示文件详细信息 |
+| `-a` | all files | `ls -a` | 显示包括隐藏文件在内的所有文件 |
 | `-h` | human-readable | `ls -lh` | 以可读的文件大小格式显示文件信息 |
-| `-R` | recursive | `ls -R`  | 递归列出当前目录及其子目录的文件 |
+| `-R` | recursive | `ls -R` | 递归列出当前目录及其子目录的文件 |
 | `-t` | sort by modification time | `ls -lt` | 按时间排序文件 |
 
-- 注：这里 `ls -lh` 和 `ls -l -h`的作用相同，Linux 支持 `<option>` 合并。
+- 注：这里 `ls -lh` 和 `ls -l -h` 的作用相同，Linux 支持 `<option>` 合并。
 
 ### 1.1.2 `rm`
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-r` | recursive | `rm -r <directory>`  | 递归删除目录及其内容 |
-| `-f` | force | `rm -f <file>`  | 强制删除文件或目录，不提示确认 |
-| `-i` | interactive | `rm -i <file>`  | 删除前提示用户确认 |
-| `-v` | verbose | `rm -v <file>`  | 显示删除过程中的详细信息 |
+| `-r` | recursive | `rm -r <directory>` | 递归删除目录及其内容 |
+| `-f` | force | `rm -f <file>` | 强制删除文件或目录，不提示确认 |
+| `-i` | interactive | `rm -i <file>` | 删除前提示用户确认 |
+| `-v` | verbose | `rm -v <file>` | 显示删除过程中的详细信息 |
 
 ### 1.1.3 `mv`
 
@@ -50,8 +50,8 @@
 | :--: | :--: | :--: | :--: |
 | 无 | 无 | `mv <file1> <file2>` | 将 file1 重命名为 file2 |
 | 无 | 无 | `mv <file> </path/to/directory/>` | 将文件移动到指定目录 |
-| `-i` | interactive | `mv -i <file1> <file2>`  | 移动或覆盖前提示用户确认 |
-| `-u` | update | `mv -u <file1> <file2>`  | 仅在 file1 比 file2 更新时才进行移动或覆盖 |
+| `-i` | interactive | `mv -i <file1> <file2>` | 移动或覆盖前提示用户确认 |
+| `-u` | update | `mv -u <file1> <file2>` | 仅在 file1 比 file2 更新时才进行移动或覆盖 |
 
 ### 1.1.4 `tar`
 
@@ -78,9 +78,9 @@
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-R` | recursive | `chmod -R 755 <directory>`  | 递归修改目录及其内容的权限 |
+| `-R` | recursive | `chmod -R 755 <directory>` | 递归修改目录及其内容的权限 |
 | `[ugo][+-][rwx]` | [user/group/others][+/-][read/write/execute] | `chmod +x <file>` `chmod go-wx <file>` `chmod u+w g-x <file>` | 修改文件或目录的读、写、执行权限，可以通过多种组合实现 |
-| `755` | 无 | `chmod 755 file`  | 将文件权限设置为 `rwxr-xr-x` |
+| `755` | 无 | `chmod 755 file` | 将文件权限设置为 `rwxr-xr-x` |
 
 - 注：`chmod 755` 的三个数字分别表示不同用户的文件权限，每个数字由 **读 (r=4)**、**写 (w=2)** 和 **执行 (x=1)** 的加和值组成：
 	- 第一个数字 7：代表文件所有者 User 的权限，**7=4+2+1**，即 User 拥有读、写和执行权限。
@@ -108,20 +108,20 @@
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-n` | number lines | `cat -n <file>`  | 显示文件内容并为每一行编号 |
-| `-b` | number non-blank lines | `cat -b <file>`  | 显示文件内容并为非空行编号 |
-| `-s` | squeeze blank | `cat -s <file>`  | 压缩多余的空白行 |
-| `-A` | show all | `cat -A <file>`  | 显示文件的不可见字符 |
+| `-n` | number lines | `cat -n <file>` | 显示文件内容并为每一行编号 |
+| `-b` | number non-blank lines | `cat -b <file>` | 显示文件内容并为非空行编号 |
+| `-s` | squeeze blank | `cat -s <file>` | 压缩多余的空白行 |
+| `-A` | show all | `cat -A <file>` | 显示文件的不可见字符 |
 | 无 | 无 | `cat <file> <file2> > <new_file>` | 合并文件 |
 
 ### 1.2.2 `find`
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-name` | name | `find . -name "*.txt"`  | 在当前目录及子目录中查找以 `.txt` 结尾的文件 |
-| `-type` | type | `find <path> -type d`  | 查找目录文件 directory |
-| `-size` | size | `find <path> -size +1M`  | 查找大于 1MB 的文件 |
-| `-exec` | execute | `find <path> -name "*.log" -exec rm {} \\;`  | 查找到符合条件的文件后执行指定的命令 |
+| `-name` | name | `find . -name "*.txt"` | 在当前目录及子目录中查找以 `.txt` 结尾的文件 |
+| `-type` | type | `find <path> -type d` | 查找目录文件 directory |
+| `-size` | size | `find <path> -size +1M` | 查找大于 1MB 的文件 |
+| `-exec` | execute | `find <path> -name "*.log" -exec rm {} \\;` | 查找到符合条件的文件后执行指定的命令 |
 
 ## 1.3 输入输出控制
 
@@ -168,10 +168,10 @@ seq 1 10 | shuf | sort -n
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-i`  | ignore case | `grep -i <char> <file>`  | 忽略大小写进行匹配 |
-| `-v`  | invert match | `grep -v <char> <file>`  | 显示不匹配指定模式的行 |
-| `-r`  | recursive | `grep -r <char> <directory>`  | 递归查找目录中的匹配项 |
-| `-n`  | line number | `grep -n <char> <file>`  | 显示匹配行的行号 |
+| `-i` | ignore case | `grep -i <char> <file>` | 忽略大小写进行匹配 |
+| `-v` | invert match | `grep -v <char> <file>` | 显示不匹配指定模式的行 |
+| `-r` | recursive | `grep -r <char> <directory>` | 递归查找目录中的匹配项 |
+| `-n` | line number | `grep -n <char> <file>` | 显示匹配行的行号 |
 
 - 如果想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb` 。
 
@@ -181,9 +181,9 @@ seq 1 10 | shuf | sort -n
 
 | 选项 | 全称 | 举例 | 说明 |
 | :--: | :--: | :--: | :--: |
-| `-e` | expression | `sed -e 's/<old_char>/<new_char>/g' -e 's/<old_char1>/<new_char1>/g' <file>`  | 指定要执行的 sed 脚本或表达式（可选多个） |
-| `-f` | file | `sed -f <script_file> <file>`  | 指定要执行的 sed 脚本文件 |
-| `-i` | in-place | `sed -i 's/<old_char>/<new_char>/g' <file>`  | 直接在文件中进行替换，而不输出到终端（只有此选项会修改原文件） |
+| `-e` | expression | `sed -e 's/<old_char>/<new_char>/g' -e 's/<old_char1>/<new_char1>/g' <file>` | 指定要执行的 sed 脚本或表达式（可选多个） |
+| `-f` | file | `sed -f <script_file> <file>` | 指定要执行的 sed 脚本文件 |
+| `-i` | in-place | `sed -i 's/<old_char>/<new_char>/g' <file>` | 直接在文件中进行替换，而不输出到终端（只有此选项会修改原文件） |
 
 - 我习惯将单引号中的内容称为 `<operator>` , `<operator>` 不止 `s` 一种。
 - `<operator>` 和 Vim 的操作有很多相似之处，建议读者看完 [2 Vim](#2-Vim) 后再探索更多 `sed` 的用法。
