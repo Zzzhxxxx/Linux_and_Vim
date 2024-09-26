@@ -151,7 +151,7 @@ seq 1 10 | shuf | sort -n
 
 - 比较一下输出的结果有何不同，据此结果思考这些命令中蕴含了什么样的重定向过程（注：`shuf` 的功能是乱序，`sort -n` 的功能是按数字大小排序）。
 
-## 1.4 文本处理（待修改）
+## 1.4 文本处理
 
 | 命令 | 全称 | 说明 |
 | :--: | :--: | :--: |
@@ -170,8 +170,10 @@ seq 1 10 | shuf | sort -n
 | :--: | :--: | :--: | :--: |
 | `-i`  | ignore case | `grep -i <str> <file>`  | 忽略大小写进行匹配 |
 | `-v`  | invert match | `grep -v <str> <file>`  | 显示不匹配指定模式的行 |
-| `-r`  | recursive | `grep -r <str> <path>`  | 递归查找目录中的匹配项 |
+| `-r`  | recursive | `grep -r <str> <directory>`  | 递归查找目录中的匹配项 |
 | `-n`  | line number | `grep -n <str> <file>`  | 显示匹配行的行号 |
+
+- 如果我想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb` 。
 
 ### 1.4.2 `awk`
 
