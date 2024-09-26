@@ -197,7 +197,7 @@ seq 1 10 | shuf | sort -n
 
 | 命令 | 全称 | 说明 |
 | :--: | :--: | :--: |
-| `jobs` | jobs | 列出当前 shell 会话中的所有任务 |
+| `jobs` | jobs | 列出当前 Shell 会话中的所有任务 |
 | `ps` | process status | 显示当前系统中的活动进程 |
 | `top` | table of process | 实时显示系统中进程的动态实时视图 |
 | `kill` | kill | 发送特定的信号到进程，通常用来终止进程 |
@@ -215,19 +215,19 @@ seq 1 10 | shuf | sort -n
 | `<Ctrl> - e` | 移动光标到行尾 |
 | `<Ctrl> - l` | 清空屏幕，移动光标到左上角，和 `clear` 作用相同 |
 
-## 1.7 配置 shell
-- 在开始本章节前，需要先确定您的 shell 类型。常见的 shell 类型有 bash/csh/zsh 等等。
-- 使用 `echo $SHELL` 命令查看您的 shell 类型。
-- 如果返回的是 `/bin/bash`，说明您的 shell 类型是 bash（下面的操作暂时以 bash 为例）。
+## 1.7 配置 Shell
+- 在开始本章节前，需要先确定您的 Shell 类型。常见的 Shell 类型有 bash/csh/zsh 等等。
+- 使用 `echo $Shell` 命令查看您的 Shell 类型。
+- 如果返回的是 `/bin/bash`，说明您的 Shell 类型是 bash（下面的操作暂时以 bash 为例）。
 - 进入 `home` 目录，然后打开 `.bashrc` 文件：
 
-```shell
+```Shell
 cd ~
 givm .bashrc
 ```
 
-- 注：如果您的 shell 类型不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
-- 打开 `.bashrc` 文件后，输入以下命令以配置 shell。
+- 注：如果您的 Shell 类型不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
+- 打开 `.bashrc` 文件后，输入以下命令以配置 Shell。
 
 ```.bashrc
 function cdls() 
