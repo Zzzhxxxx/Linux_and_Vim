@@ -499,8 +499,6 @@ Bright vixens jump; dozy fowl quack.
 - 执行一个外部命令：`:!<command>`，例如，`:!ls`
 - 将当前Vim中正在编辑的文件保存到文件中：`:w <filename>`
 - 将当前编辑文件中可视模式下选中的内容保存到文件中：`v <motion> :w <filename>`
-- 提取磁盘文件并将其插入到当前文件的光标位置后面：`r <filename>`
-- 读取命令的输出并将其放置到当前文件的光标位置后面：`:r! <command>`
 - 显示目前光标所在位置和文件状态信息：`<Ctrl> - g`
 
 ### 2.7.2 其他
