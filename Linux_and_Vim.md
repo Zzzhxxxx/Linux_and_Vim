@@ -509,7 +509,7 @@ Bright vixens jump; dozy fowl quack.
 | `<Ctrl> - b`/`<PgUp>` | 向上翻一页 |
 | `%` | 如果光标当前位置是括号`( ) [ ] { }`，将光标移动到配对的括号上 |
 
-## 2.8 配置Vim
+## 2.8 配置 Vim
 在`.vimrc`文件中输入以下命令以配置Vim（`.vimrc`的路径也在home目录下，详情见 [1.7 配置Shell](#17-配置Shell)）：
 
 ```.vimrc
