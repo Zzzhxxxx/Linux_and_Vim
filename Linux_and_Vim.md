@@ -1,12 +1,12 @@
 # 1 Linux
-- 因为能力有限，此篇只分享我在学习工作过程中的常用命令。大多数命令 `<command>` 会有其专门的选项 `<option>`，我会列举出一些常用的命令和选项。
+- 因为能力有限，此篇只分享我在学习工作过程中的常用命令。大多数命令 `<command>` 会有其专门的选项 `<option>` ，我会列举出一些常用的命令和选项。
 - Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html 。
 
 ## 1.0 `man`
 - `man`：**最重要的命令！Read The Friendly Manual！**
 - `man <command>`：如果您的英文水平较好，凭借这个命令，您几乎可以掌握整个 Linux 系统的操作。其功能是打开 `<command>` 这项命令的操作指南。
-- 举例：`man man`/`man ls`/`man cp`。
-- 注：[1.0 man](#10-man)~[1.5 系统监控](#15-系统监控) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>`。
+- 举例：`man man` / `man ls` / `man cp` 。
+- 注：[1.0 man](#10-man)~[1.5 系统监控](#15-系统监控) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>` 。
 
 ## 1.1 文件管理
 
@@ -140,7 +140,7 @@
 | `2>` | 标准错误重定向：将命令的错误输出写入到文件中 | `ls <not_exist_file> 2> error.log` |
 
 - 由于使用尖括号的缘故，上表可能看起来有些不易理解，请读者多点耐心辨识重定向符号。
-- 管道 `|`：将管道前命令的输出直接作为管道后命令的输入，可以理解为特殊的重定向。
+- 管道 `|` ：将管道前命令的输出直接作为管道后命令的输入，可以理解为特殊的重定向。
 - 您可以在 Terminal 中分别输入：
 
 ```Terminal
@@ -218,7 +218,7 @@ seq 1 10 | shuf | sort -n
 ## 1.7 配置 Shell
 - 在开始本章节前，需要先确定您的 Shell 类型。常见的 Shell 类型有 bash/csh/zsh 等等。
 - 使用 `echo $Shell` 命令查看您的 Shell 类型。
-- 如果返回的是 `/bin/bash`，说明您的 Shell 类型是 bash（下面的操作暂时以 bash 为例）。
+- 如果返回的是 `/bin/bash` ，说明您的 Shell 类型是 bash（下面的操作暂时以 bash 为例）。
 - 进入 `home` 目录，然后打开 `.bashrc` 文件：
 
 ```Shell
@@ -227,7 +227,7 @@ givm .bashrc
 ```
 
 - 注：如果您的 Shell 类型不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
-- 打开 `.bashrc` 文件后，输入以下命令以配置 Shell。
+- 打开 `.bashrc` 文件后，输入以下命令以配置 Shell 。
 
 ```.bashrc
 function cdls() 
@@ -247,7 +247,7 @@ alias favr='find "$(pwd)" -name "*.v"' # Find All .v Files Recursively
 alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively 
 ```
 
-- 配置完成后 `source .bashrc` 并重启 Terminal，就可以用更简单的命令了。比如我想用 Vim 打开某个文件，以前需要使用 `gvim <file>` 命令，现在只需要使用 `g <file>` 命令即可。
+- 配置完成后 `source .bashrc` 并重启 Terminal ，就可以用更简单的命令了。比如我想用 Vim 打开某个文件，以前需要使用 `gvim <file>` 命令，现在只需要使用 `g <file>` 命令即可。
 - 注：上面只是抛砖引玉，主要功能是简化一些命令。`.bashrc` 的自定义程度很高，读者可以自行配置。
 
 ## 1.8 正则表达式
@@ -258,8 +258,8 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 - 我个人的理解是，初学时没必要从头到尾全部学会，因为内容较多并且如果长时间不用会容易忘记。所以我建议先学会一些基础的正则表达式，待到实际应用中将这几个网站当作手册查阅，做到用以致学。
 
 # 2 Vim
-- Vim 分为多种操作模式：正常模式 `Normal mode`、插入模式 `Insert mode`、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
-- 用 Vim 编辑器打开文件后，默认进入正常模式 [2.1 正常模式](#21-正常模式)。在正常模式进行某些操作以进入其他模式，详情见 [2.2 嵌入模式](#22-嵌入模式) ~ [2.6.1 替换模式](#261-替换模式)。
+- Vim 分为多种操作模式：正常模式 `Normal mode` 、插入模式 `Insert mode` 、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
+- 用 Vim 编辑器打开文件后，默认进入正常模式 [2.1 正常模式](#21-正常模式)。在正常模式进行某些操作以进入其他模式，详情见 [2.2 嵌入模式](#22-嵌入模式) ~ [2.6.1 替换模式](#261-替换模式) 。
 - 在其他模式下 `<ESC>` 回到正常模式。
 
 ## 2.0 进入 Vim
@@ -267,7 +267,7 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 	- Vim 是 vi 的升级版本，它不仅兼容 vi 的所有指令，而且还支持新的特性。
 	- `gvim` 命令和 `vim` 命令的区别在于：`vim` 占用原来的 Terminal 打开文件，`gvim` 可以不占用原来的 Terminal 直接打开文件。
 	- 综上所述，建议使用 `gvim <file>` 打开文件。
-- 和 Linux 其他命令类似，进入 Vim 也可以选择 `<option>`。
+- 和 Linux 其他命令类似，进入 Vim 也可以选择 `<option>` 。
 
 | 命令 | 说明 |
 | :--: | :--: |
@@ -376,7 +376,7 @@ Bright vixens jump; dozy fowl quack.
 | `p` \| paste | 粘贴到当前光标位置的后面 |
 | `P` | 粘贴到当前光标位置的前面 |
 
-- 需要注意的是，如果之前是以 `dd`/`5yy` 这种以行为单位的操作实现删除/复制功能之后，`p` 会直接在当前行的下一行粘贴，`P` 会直接在当前行的上一行粘贴，很方便（之后提到的 `Line Visual Mode` 也会有此特性）。
+- 需要注意的是，如果之前是以 `dd` / `5yy` 这种以行为单位的操作实现删除/复制功能之后，`p` 会直接在当前行的下一行粘贴，`P` 会直接在当前行的上一行粘贴，很方便（之后提到的 `Line Visual Mode` 也会有此特性）。
 
 ### 2.1.5 替换文本
 
@@ -507,7 +507,7 @@ Bright vixens jump; dozy fowl quack.
 | :--: | :--: |
 | `<Ctrl> - f`/`<PgDown>` | 向下翻一页 |
 | `<Ctrl> - b`/`<PgUp>` | 向上翻一页 |
-| `%` | 如果光标当前位置是括号`( ) [ ] { }`，将光标移动到配对的括号上 |
+| `%` | 如果光标当前位置是括号 `( ) [ ] { }` ，将光标移动到配对的括号上 |
 
 ## 2.8 配置 Vim
 在`.vimrc`文件中输入以下命令以配置 Vim（ `.vimrc` 的路径也在 home 目录下，详情见 [1.7 配置Shell](#17-配置Shell)）：
