@@ -89,7 +89,7 @@
 
 ![image](https://github.com/user-attachments/assets/c775e5c1-c0d7-4cfb-b317-d8498b64dbd9)
 
-- 以这张图片为例（`ll` 是之前提到的 `ls -l` 命令的缩写），add.v 文件的权限是 664，hello 文件夹的权限是 775。
+- 以这张图片为例（`ll` 是之前提到的 `ls -l` 命令的缩写），add.v 文件的权限是 664，hello 文件夹的权限是 775 。
 - 注：第一位 `d` 代表 directory，`-` 代表普通文件。
 
 ## 1.2 文件检索
@@ -226,7 +226,7 @@ cd ~
 givm .bashrc
 ```
 
-- 注：如果您的 Shell 类型不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
+- 注：如果您的 Shell 类型不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands` ，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
 - 打开 `.bashrc` 文件后，输入以下命令以配置 Shell 。
 
 ```.bashrc
@@ -384,8 +384,8 @@ Bright vixens jump; dozy fowl quack.
 | :--: | :--: |
 | `r` \| replace | 替换当前光标的内容 |
 
-- 格式为：`<number> r <new_character>`，举例：`10rl` / `3rx`。
-- [2.1.2 删除文本](#212-删除文本)~[2.1.5 替换文本](#215-替换文本) 中介绍的操作我都称之为 `<operator>`（当然强大的 Vim 不只有这几种 `<operator>`），不难发现 Vim 中的很多操作都是 `<operator> <number> <motion>` 的自由组合。明白这点后，您已经对 Vim 有一定理解了！
+- 格式为：`<number> r <new_character>`，举例：`10rl` / `3rx` 。
+- [2.1.2 删除文本](#212-删除文本) ~ [2.1.5 替换文本](#215-替换文本) 中介绍的操作我都称之为 `<operator>`（当然强大的 Vim 不只有这几种 `<operator>`），不难发现 Vim 中的很多操作都是 `<operator> <number> <motion>` 的自由组合。明白这点后，您已经对 Vim 有一定理解了！
 
 ### 2.1.6 撤销操作
 
@@ -411,7 +411,7 @@ Bright vixens jump; dozy fowl quack.
 | `c` \| change | 删除 `<motion>` 指定的字符并进入嵌入模式 |
 
 - 区别在于插入文本的位置不同。
-- 需要注意的是 `s` 可以配合 `<number>` 使用，如 `3s`；`c` 可以配合 `<number>` 和 `<motion>` 使用，如 `c2e`，具体功能如何读者可以自己探索。
+- 需要注意的是 `s` 可以配合 `<number>` 使用，如 `3s` ；`c` 可以配合 `<number>` 和 `<motion>` 使用，如 `c2e` ，具体功能如何读者可以自己探索。
 - 进入嵌入模式之后就可以随意输入文本了。
 
 ## 2.3 可视模式
@@ -422,7 +422,7 @@ Bright vixens jump; dozy fowl quack.
 | `V` | 进入行可视模式 |
 | `<Ctrl> - v` | 进入列可视模式 |
 
-- 进入可视模式后，根据 [2.1.1 移动光标](#211-移动光标) 所讲移动光标 `<motion>` 以选中想操作的文本内容，再进行操作 `<operator>`，操作生效后会自动退出可视模式。
+- 进入可视模式后，根据 [2.1.1 移动光标](#211-移动光标) 所讲移动光标 `<motion>` 以选中想操作的文本内容，再进行操作 `<operator>` ，操作生效后会自动退出可视模式。
 - 举例：如果想利用可视模式删掉下图光标所在行的 "How quickly daft" 应该怎么做？
 
 ![image-20240510155735301](https://github.com/Zzzhxxxx/Linux-and-Vim/assets/131342513/315cfbda-84ca-40a0-a3aa-df0ea9d71877)
@@ -433,7 +433,7 @@ Bright vixens jump; dozy fowl quack.
 
 ## 2.4 命令模式
 - 命令模式以 `:` 开始，以 `<Enter>` 结束。
-- 为了和其他模式区分并让命令看起来简洁，我会在下表中列出 `:` 而不列出 `<Enter>`，您在输入时请不要忘记 `<Enter>`。
+- 为了和其他模式区分并让命令看起来简洁，我会在下表中列出 `:` 而不列出 `<Enter>` ，您在输入时请不要忘记 `<Enter>` 。
 
 | 按键 | 说明 |
 | :--: | :--: |
@@ -444,15 +444,15 @@ Bright vixens jump; dozy fowl quack.
 
 ## 2.5 查找模式
 - 查找模式以 `/` 或 `?` 开始，以 `<Enter>` 结束。
-- 为了和其他模式区分并让命令看起来简洁，我会在下表中列出 `/` 或 `?` 而不列出 `<Enter>`，您在输入时请不要忘记 `<Enter>`。
+- 为了和其他模式区分并让命令看起来简洁，我会在下表中列出 `/` 或 `?` 而不列出 `<Enter>` ，您在输入时请不要忘记 `<Enter>` 。
 
 | 按键 | 说明 |
 | :--: | :--: |
 | `/ <char>` | 正向查找文本 |
 | `? <char>` | 反向查找文本 |
 
-- 关于查找文本值得注意的是：输入上述命令后，按 `<Enter>` 开始查找。按 `n` 查找下一个 `<char>`，按 `N` 查找上一个 `<char>`。
-- 不知道您有没有发现：`<shift> - /` 等价于 `?`，`<shift> - n` 等价于 `N`。
+- 关于查找文本值得注意的是：输入上述命令后，按 `<Enter>` 开始查找。按 `n` 查找下一个 `<char>` ，按 `N` 查找上一个 `<char>` 。
+- 不知道您有没有发现：`<shift> - /` 等价于 `?`，`<shift> - n` 等价于 `N` 。
 
 ## 2.6 替换
 ### 2.6.1 替换模式
@@ -510,7 +510,7 @@ Bright vixens jump; dozy fowl quack.
 | `%` | 如果光标当前位置是括号 `( ) [ ] { }` ，将光标移动到配对的括号上 |
 
 ## 2.8 配置 Vim
-在`.vimrc`文件中输入以下命令以配置 Vim（ `.vimrc` 的路径也在 home 目录下，详情见 [1.7 配置Shell](#17-配置Shell)）：
+在`.vimrc`文件中输入以下命令以配置 Vim（ `.vimrc` 的路径也在 home 目录下，详情见 [1.7 配置Shell](#17-配置Shell) ）：
 
 ```.vimrc
 syntax on
