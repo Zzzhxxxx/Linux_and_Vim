@@ -384,7 +384,7 @@ Bright vixens jump; dozy fowl quack.
 | :--: | :--: |
 | `r` \| replace | 替换当前光标的内容 |
 
-- 格式为：`<number> r <new_character>`，举例：`10rl` / `3rx` 。
+- 格式为：`<number> r <new_character>` ，举例：`10rl` / `3rx` 。
 - [2.1.2 删除文本](#212-删除文本) ~ [2.1.5 替换文本](#215-替换文本) 中介绍的操作我都称之为 `<operator>`（当然强大的 Vim 不只有这几种 `<operator>`），不难发现 Vim 中的很多操作都是 `<operator> <number> <motion>` 的自由组合。明白这点后，您已经对 Vim 有一定理解了！
 
 ### 2.1.6 撤销操作
