@@ -497,7 +497,7 @@ Bright vixens jump; dozy fowl quack.
 ## 2.7 其他操作
 ### 2.7.1 交互功能
 - 执行一个外部命令：`:!<command>`，例如，`:!ls`
-- 将当前Vim中正在编辑的文件保存到文件中：`:w <filename>`
+- 将当前 Vim 中正在编辑的文件保存到文件中：`:w <filename>`
 - 将当前编辑文件中可视模式下选中的内容保存到文件中：`v <motion> :w <filename>`
 - 显示目前光标所在位置和文件状态信息：`<Ctrl> - g`
 
@@ -510,7 +510,7 @@ Bright vixens jump; dozy fowl quack.
 | `%` | 如果光标当前位置是括号`( ) [ ] { }`，将光标移动到配对的括号上 |
 
 ## 2.8 配置 Vim
-在`.vimrc`文件中输入以下命令以配置Vim（`.vimrc`的路径也在home目录下，详情见 [1.7 配置Shell](#17-配置Shell)）：
+在`.vimrc`文件中输入以下命令以配置 Vim（ `.vimrc` 的路径也在 home 目录下，详情见 [1.7 配置Shell](#17-配置Shell)）：
 
 ```.vimrc
 syntax on
