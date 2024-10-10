@@ -176,7 +176,6 @@ seq 1 10 | shuf | sort -n
 - 如果想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb`。
 
 ### 1.4.2 `sed`
-
 - 这个命令一般不会在终端中使用，因为在处理单独文件时 Vim 基本包含 `sed` 的所有功能。所以这个命令一般出现在脚本中，用于处理大批量、重复的文件。
 
 | 选项 | 全称 | 举例 | 说明 |
@@ -189,8 +188,7 @@ seq 1 10 | shuf | sort -n
 - `<operator>` 和 Vim 的操作有很多相似之处，建议读者看完 [2 Vim](#2-Vim) 后再探索更多 `sed` 的用法。
 
 ### 1.4.3 `awk`
-
-- 我自己的理解是，`awk` 已经不只是一个终端命令，甚至能独立成为一种专门处理文本的独立语言。
+- `awk` 已经不只是一个终端命令，甚至能独立成为一种专门处理文本的独立语言。
 - 因为此命令较为复杂，由于篇幅限制很难讲清楚，如果您有兴趣请移步：[awk教程](https://www.runoob.com/linux/linux-comm-awk.html)。
 
 ## 1.5 系统监控
@@ -255,7 +253,7 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 	- [菜鸟教程](https://www.runoob.com/regexp/regexp-tutorial.html)
  	- [鸟哥](https://linux.vbird.org/linux_basic/centos7/0330regularex.php)
   	- [MIT 课程](https://missing-semester-cn.github.io/2020/data-wrangling/)
-- 我个人的理解是，初学时没必要从头到尾全部学会，因为内容较多并且如果长时间不用会容易忘记。所以我建议先学会一些基础的正则表达式，待到实际应用中将这几个网站当作手册查阅，做到用以致学。
+- 我个人的理解是：在初学时没必要从头到尾全部记住，因为正则表达式内容较多，并且长时间不使用容易遗忘。所以我建议先学会一些基础的正则表达式，待到实际应用中将这几个网站当作手册查阅，做到用以致学。
 
 # 2 Vim
 - Vim 分为多种操作模式：正常模式 `Normal mode`、插入模式 `Insert mode`、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
