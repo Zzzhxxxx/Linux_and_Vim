@@ -1,12 +1,12 @@
 # 1 Linux
-- 因为能力有限，此篇只分享我在学习工作过程中的常用命令。大多数命令 `<command>` 会有其专门的选项 `<option>` ，我会列举出一些常用的命令和选项。
-- Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html 。
+- 因为能力有限，此篇只分享我在学习工作过程中的常用命令。大多数命令 `<command>` 会有其专门的选项 `<option>`，我会列举出一些常用的命令和选项。
+- Linux 命令大全请移步：https://www.runoob.com/linux/linux-command-manual.html。
 
 ## 1.0 `man`
 - `man`：**最重要的命令！Read The Friendly Manual！**
 - `man <command>`：如果您的英文水平较好，凭借这个命令，您几乎可以掌握整个 Linux 系统的操作。其功能是打开 `<command>` 这项命令的操作指南。
-- 举例：`man man` / `man ls` / `man cp` 。
-- 注：[1.0 man](#10-man) ~ [1.5 系统监控](#15-系统监控) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>` 。
+- 举例：`man man` / `man ls` / `man cp`。
+- 注：[1.0 man](#10-man) ~ [1.5 系统监控](#15-系统监控) 都表示在终端输入的命令，输入命令之后还需要输入 `<Enter>`。
 
 ## 1.1 文件管理
 
@@ -83,13 +83,13 @@
 | `755` | 无 | `chmod 755 file` | 将文件权限设置为 `rwxr-xr-x` |
 
 - 注：`chmod 755` 的三个数字分别表示不同用户的文件权限，每个数字由 **读 (r=4)** 、**写 (w=2)** 和 **执行 (x=1)** 的加和值组成：
-	- 第一个数字 7：代表文件所有者 User 的权限，**7=4+2+1** ，即 User 拥有读、写和执行权限。
-	- 第二个数字 5：代表群组 Group 的权限，**5=4+1** ，即 Group 拥有读和执行权限。
-	- 第三个数字 5：代表其他用户 Others 的权限，**5=4+1** ，即 Others 拥有读和执行权限。
+	- 第一个数字 7：代表文件所有者 User 的权限，**7=4+2+1**，即 User 拥有读、写和执行权限。
+	- 第二个数字 5：代表群组 Group 的权限，**5=4+1**，即 Group 拥有读和执行权限。
+	- 第三个数字 5：代表其他用户 Others 的权限，**5=4+1**，即 Others 拥有读和执行权限。
 
 ![image](https://github.com/user-attachments/assets/c775e5c1-c0d7-4cfb-b317-d8498b64dbd9)
 
-- 以这张图片为例（`ll` 是之前提到的 `ls -l` 命令的缩写），add.v 文件的权限是 664，hello 文件夹的权限是 775 。
+- 以这张图片为例（`ll` 是之前提到的 `ls -l` 命令的缩写），add.v 文件的权限是 664，hello 文件夹的权限是 775。
 - 注：第一位 `d` 代表 directory，`-` 代表普通文件。
 
 ## 1.2 文件检索
@@ -173,7 +173,7 @@ seq 1 10 | shuf | sort -n
 | `-r` | recursive | `grep -r <char> <directory>` | 递归查找目录中的匹配项 |
 | `-n` | line number | `grep -n <char> <file>` | 显示匹配行的行号 |
 
-- 如果想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb` 。
+- 如果想在 file.txt 文件中查找包含 `aaa` 而不包含 `bbb` 的行并显示行号：`grep -n aaa file.txt | grep -v bbb`。
 
 ### 1.4.2 `sed`
 
@@ -185,13 +185,13 @@ seq 1 10 | shuf | sort -n
 | `-f` | file | `sed -f <script_file> <file>` | 指定要执行的 sed 脚本文件 |
 | `-i` | in-place | `sed -i 's/<old_char>/<new_char>/g' <file>` | 直接在文件中进行替换，而不输出到终端（只有此选项会修改原文件） |
 
-- 我习惯将单引号中的内容称为 `<operator>` , `<operator>` 不止 `s` 一种。
+- 我习惯将单引号中的内容称为 `<operator>`， `<operator>` 不止 `s` 一种。
 - `<operator>` 和 Vim 的操作有很多相似之处，建议读者看完 [2 Vim](#2-Vim) 后再探索更多 `sed` 的用法。
 
 ### 1.4.3 `awk`
 
 - 我自己的理解是，`awk` 已经不只是一个终端命令，甚至能独立成为一种专门处理文本的独立语言。
-- 因为此命令较为复杂，由于篇幅限制很难讲清楚，如果您有兴趣请移步：https://www.runoob.com/linux/linux-comm-awk.html 。
+- 因为此命令较为复杂，由于篇幅限制很难讲清楚，如果您有兴趣请移步：https://www.runoob.com/linux/linux-comm-awk.html。
 
 ## 1.5 系统监控
 
@@ -218,7 +218,7 @@ seq 1 10 | shuf | sort -n
 ## 1.7 配置 Shell
 - 在开始本章节前，需要先确定您的 Shell 类型。常见的 Shell 类型有 bash / csh / zsh 等等。
 - 使用 `echo $Shell` 命令查看您的 Shell 类型。
-- 如果返回的是 `/bin/bash` ，说明您的 Shell 类型是 bash（下面的操作暂时以 bash 为例）。
+- 如果返回的是 `/bin/bash`，说明您的 Shell 类型是 bash（下面的操作暂时以 bash 为例）。
 - 进入 `home` 目录，然后打开 `.bashrc` 文件：
 
 ```Shell
@@ -226,8 +226,8 @@ cd ~
 givm .bashrc
 ```
 
-- 注：如果您的 Shell 类型不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands` ，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
-- 打开 `.bashrc` 文件后，输入以下命令以配置 Shell 。
+- 注：如果您的 Shell 类型不是 bash，可以在 home 目录下使用 `ls -a` 命令查看名为 `.<shell_type>rc` 的文件并打开它。这里的 `rc` 意为 `run commands`，代表启动 Shell 时自动执行的命令。[2.8 配置Vim](#28-配置Vim) 中的 `.vimrc` 也是同样的道理。
+- 打开 `.bashrc` 文件后，输入以下命令以配置 Shell。
 
 ```.bashrc
 function cdls() 
@@ -247,7 +247,7 @@ alias favr='find "$(pwd)" -name "*.v"' # Find All .v Files Recursively
 alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively 
 ```
 
-- 配置完成后 `source .bashrc` 并重启 Terminal ，就可以用更简单的命令了。比如我想用 Vim 打开某个文件，以前需要使用 `gvim <file>` 命令，现在只需要使用 `g <file>` 命令即可。
+- 配置完成后 `source .bashrc` 并重启 Terminal，就可以用更简单的命令了。比如我想用 Vim 打开某个文件，以前需要使用 `gvim <file>` 命令，现在只需要使用 `g <file>` 命令即可。
 - 注：上面只是抛砖引玉，主要功能是简化一些命令。`.bashrc` 的自定义程度很高，读者可以自行配置。
 
 ## 1.8 正则表达式
@@ -259,7 +259,7 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 
 # 2 Vim
 - Vim 分为多种操作模式：正常模式 `Normal mode` 、插入模式 `Insert mode` 、可视模式 `Visual mode` 和命令模式 `Command mode` 等。
-- 用 Vim 编辑器打开文件后，默认进入正常模式 [2.1 正常模式](#21-正常模式) 。在正常模式进行某些操作以进入其他模式，详情见 [2.2 嵌入模式](#22-嵌入模式) ~ [2.6.1 替换模式](#261-替换模式) 。
+- 用 Vim 编辑器打开文件后，默认进入正常模式 [2.1 正常模式](#21-正常模式)。在正常模式进行某些操作以进入其他模式，详情见 [2.2 嵌入模式](#22-嵌入模式) ~ [2.6.1 替换模式](#261-替换模式)。
 - 在其他模式下 `<ESC>` 回到正常模式。
 
 ## 2.0 进入 Vim
@@ -267,7 +267,7 @@ alias fafr='find "$(pwd)" -name "*.f"' # Find All .f Files Recursively
 	- Vim 是 vi 的升级版本，它不仅兼容 vi 的所有指令，而且还支持新的特性。
 	- `gvim` 命令和 `vim` 命令的区别在于：`vim` 占用原来的 Terminal 打开文件，`gvim` 可以不占用原来的 Terminal 直接打开文件。
 	- 综上所述，建议使用 `gvim <file>` 打开文件。
-- 和 Linux 其他命令类似，进入 Vim 也可以选择 `<option>` 。
+- 和 Linux 其他命令类似，进入 Vim 也可以选择 `<option>`。
 
 | 命令 | 说明 |
 | :--: | :--: |
@@ -384,7 +384,7 @@ Bright vixens jump; dozy fowl quack.
 | :--: | :--: |
 | `r` \| replace | 替换当前光标的内容 |
 
-- 格式为：`<number> r <new_character>` ，举例：`10rl` / `3rx` 。
+- 格式为：`<number> r <new_character>`，举例：`10rl` / `3rx`。
 - [2.1.2 删除文本](#212-删除文本) ~ [2.1.5 替换文本](#215-替换文本) 中介绍的操作我都称之为 `<operator>`（当然强大的 Vim 不只有这几种 `<operator>`），不难发现 Vim 中的很多操作都是 `<operator> <number> <motion>` 的自由组合。明白这点后，您已经对 Vim 有一定理解了！
 
 ### 2.1.6 撤销操作
@@ -411,7 +411,7 @@ Bright vixens jump; dozy fowl quack.
 | `c` \| change | 删除 `<motion>` 指定的字符并进入嵌入模式 |
 
 - 区别在于插入文本的位置不同。
-- 需要注意的是 `s` 可以配合 `<number>` 使用，如 `3s` ；`c` 可以配合 `<number>` 和 `<motion>` 使用，如 `c2e` ，具体功能如何读者可以自己探索。
+- 需要注意的是 `s` 可以配合 `<number>` 使用，如 `3s` ；`c` 可以配合 `<number>` 和 `<motion>` 使用，如 `c2e`，具体功能如何读者可以自己探索。
 - 进入嵌入模式之后就可以随意输入文本了。
 
 ## 2.3 可视模式
@@ -422,18 +422,18 @@ Bright vixens jump; dozy fowl quack.
 | `V` | 进入行可视模式 |
 | `<Ctrl> - v` | 进入列可视模式 |
 
-- 进入可视模式后，根据 [2.1.1 移动光标](#211-移动光标) 所讲移动光标 `<motion>` 以选中想操作的文本内容，再进行操作 `<operator>` ，操作生效后会自动退出可视模式。
+- 进入可视模式后，根据 [2.1.1 移动光标](#211-移动光标) 所讲移动光标 `<motion>` 以选中想操作的文本内容，再进行操作 `<operator>`，操作生效后会自动退出可视模式。
 - 举例：如果想利用可视模式删掉下图光标所在行的 "How quickly daft" 应该怎么做？
 
 ![image-20240510155735301](https://github.com/Zzzhxxxx/Linux-and-Vim/assets/131342513/315cfbda-84ca-40a0-a3aa-df0ea9d71877)
 
-- 答：`v + 3e + d` 。
+- 答：`v + 3e + d`。
 - 行可视模式 `Line Visual Mode` / 列可视模式 `Row Visual Mode` 与普通的可视模式有一定区别，您可以分别进入这 3 种模式后 `<motion>` 以探寻其中的区别。
 - 在正常模式下拖动鼠标选中文本也可以进入可视模式，但不建议这种做法。
 
 ## 2.4 命令模式
 - 命令模式以 `:` 开始，以 `<Enter>` 结束。
-- 为了和其他模式区分并让命令看起来简洁，我会在下表中列出 `:` 而不列出 `<Enter>` ，您在输入时请不要忘记 `<Enter>` 。
+- 为了和其他模式区分并让命令看起来简洁，我会在下表中列出 `:` 而不列出 `<Enter>`，您在输入时请不要忘记 `<Enter>`。
 
 | 按键 | 说明 |
 | :--: | :--: |
@@ -444,15 +444,15 @@ Bright vixens jump; dozy fowl quack.
 
 ## 2.5 查找模式
 - 查找模式以 `/` 或 `?` 开始，以 `<Enter>` 结束。
-- 为了和其他模式区分并让命令看起来简洁，我会在下表中列出 `/` 或 `?` 而不列出 `<Enter>` ，您在输入时请不要忘记 `<Enter>` 。
+- 为了和其他模式区分并让命令看起来简洁，我会在下表中列出 `/` 或 `?` 而不列出 `<Enter>`，您在输入时请不要忘记 `<Enter>`。
 
 | 按键 | 说明 |
 | :--: | :--: |
 | `/ <char>` | 正向查找文本 |
 | `? <char>` | 反向查找文本 |
 
-- 关于查找文本值得注意的是：输入上述命令后，按 `<Enter>` 开始查找。按 `n` 查找下一个 `<char>` ，按 `N` 查找上一个 `<char>` 。
-- 不知道您有没有发现：`<shift> - /` 等价于 `?` ，`<shift> - n` 等价于 `N` 。
+- 关于查找文本值得注意的是：输入上述命令后，按 `<Enter>` 开始查找。按 `n` 查找下一个 `<char>`，按 `N` 查找上一个 `<char>`。
+- 不知道您有没有发现：`<shift> - /` 等价于 `?`，`<shift> - n` 等价于 `N`。
 
 ## 2.6 替换
 ### 2.6.1 替换模式
@@ -507,7 +507,7 @@ Bright vixens jump; dozy fowl quack.
 | :--: | :--: |
 | `<Ctrl> - f` / `<PgDown>` | 向下翻一页 |
 | `<Ctrl> - b` / `<PgUp>` | 向上翻一页 |
-| `%` | 如果光标当前位置是括号 `( ) [ ] { }` ，将光标移动到配对的括号上 |
+| `%` | 如果光标当前位置是括号 `( ) [ ] { }`，将光标移动到配对的括号上 |
 
 ## 2.8 配置 Vim
 在`.vimrc`文件中输入以下命令以配置 Vim（ `.vimrc` 的路径也在 home 目录下，详情见 [1.7 配置Shell](#17-配置Shell) ）：
