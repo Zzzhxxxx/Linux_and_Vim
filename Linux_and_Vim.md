@@ -217,7 +217,7 @@ seq 1 10 | shuf | sort -n
 
 ## 1.7 配置 Shell
 - 在开始本章节前，需要先确定您的 Shell 类型。常见的 Shell 类型有 bash / csh / zsh 等等。
-- 使用 `echo $Shell` 命令查看您的 Shell 类型。
+- 使用 `echo $shell` 命令查看您的 Shell 类型。
 - 如果返回的是 `/bin/bash`，说明您的 Shell 类型是 bash（下面的操作暂时以 bash 为例）。
 - 进入 `home` 目录，然后打开 `.bashrc` 文件：
 
