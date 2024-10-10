@@ -82,10 +82,10 @@
 | `[ugo][+-][rwx]` | [user/group/others][+/-][read/write/execute] | `chmod +x <file>` `chmod go-wx <file>` `chmod u+w g-x <file>` | 修改文件或目录的读、写、执行权限，可以通过多种组合实现 |
 | `755` | 无 | `chmod 755 file` | 将文件权限设置为 `rwxr-xr-x` |
 
-- 注：`chmod 755` 的三个数字分别表示不同用户的文件权限，每个数字由 **读 (r=4)**、**写 (w=2)** 和 **执行 (x=1)** 的加和值组成：
-	- 第一个数字 7：代表文件所有者 User 的权限，**7=4+2+1**，即 User 拥有读、写和执行权限。
-	- 第二个数字 5：代表群组 Group 的权限，**5=4+1**，即 Group 拥有读和执行权限。
-	- 第三个数字 5：代表其他用户 Others 的权限，**5=4+1**，即 Others 拥有读和执行权限。
+- 注：`chmod 755` 的三个数字分别表示不同用户的文件权限，每个数字由 **读 (r=4)** 、**写 (w=2)** 和 **执行 (x=1)** 的加和值组成：
+	- 第一个数字 7：代表文件所有者 User 的权限，**7=4+2+1** ，即 User 拥有读、写和执行权限。
+	- 第二个数字 5：代表群组 Group 的权限，**5=4+1** ，即 Group 拥有读和执行权限。
+	- 第三个数字 5：代表其他用户 Others 的权限，**5=4+1** ，即 Others 拥有读和执行权限。
 
 ![image](https://github.com/user-attachments/assets/c775e5c1-c0d7-4cfb-b317-d8498b64dbd9)
 
@@ -216,7 +216,7 @@ seq 1 10 | shuf | sort -n
 | `<Ctrl> - l` | 清空屏幕，移动光标到左上角，和 `clear` 作用相同 |
 
 ## 1.7 配置 Shell
-- 在开始本章节前，需要先确定您的 Shell 类型。常见的 Shell 类型有 bash/csh/zsh 等等。
+- 在开始本章节前，需要先确定您的 Shell 类型。常见的 Shell 类型有 bash / csh / zsh 等等。
 - 使用 `echo $Shell` 命令查看您的 Shell 类型。
 - 如果返回的是 `/bin/bash` ，说明您的 Shell 类型是 bash（下面的操作暂时以 bash 为例）。
 - 进入 `home` 目录，然后打开 `.bashrc` 文件：
